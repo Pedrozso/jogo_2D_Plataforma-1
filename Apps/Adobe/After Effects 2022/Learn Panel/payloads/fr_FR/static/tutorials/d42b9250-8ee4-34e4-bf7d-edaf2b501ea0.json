@@ -1,0 +1,176 @@
+{
+    "aem_id": "after-effects/how-to/in-app-create-a-composition",
+    "metadata": {
+        "descriptions": {
+            "medium": "Learn how to create an After Effects composition.",
+            "short": "Learn how to create an After Effects composition.",
+            "long": "Learn how to create an After Effects composition."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Création d’une composition",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea0",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Create a Composition.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepPreferenceMods": [
+                        {
+                            "actionName": "setImportPath",
+                            "payload": {
+                                "newVal": "{{pathProjectPayloads}}playlist_the-basics/footage"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}new-comp-from-footage.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Création d’une composition à partir de Métrage"
+                        },
+                        {
+                            "type": "text",
+                            "text": "After Effects vous permet de créer, de combiner ou de composer des éléments audio et visuels différents, tels que les textes, les vidéos et les sons, puis de les animer de manière amusante et créative."
+                        },
+                        {
+                            "type": "text",
+                            "text": "La première étape d’un projet After Effects consiste à importer les médias que vous allez utiliser pour créer une composition."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Dans le panneau <$Composition$>, cliquez sur <$Nouvelle Composition à partir de Métrage$>."
+                                },
+                                {
+                                    "text": "Tout d’abord, sélectionnez le fichier Adobe Illustrator APEAK_Logo.ai, puis passez le paramètre <$Importer sous$> de « Métrage » à <$Composition$> et cliquez sur « {BUTTON.IMPORT_IN_DIALOG.{{osName}}} ».",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "projectItemAdded",
+                                            "payload": {
+                                                "itemType": "composition"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Regardez dans le {{definition:{TOOLTIP.PROJECT_PANEL}|panneau Projet}}. Vous devriez maintenant voir deux éléments : la composition que vous venez de créer et un dossier contenant les fichiers du logo d’origine."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "setItemSelected",
+                            "payload": {
+                                "itemName": "APEAK_Logo",
+                                "selected": false
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}opening-comp.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ouverture de la composition"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Maintenant que vous avez créé la {{definition:{TOOLTIP.COMPOSITION}|composition}}, vous devez l’ouvrir dans le <$panneau Montage$> afin de pouvoir la modifier."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Double-cliquez sur la composition <$APEAK_Logo$> dans le panneau Projet.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isCompositionActive",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Regardez dans le {{definition:{TOOLTIP.COMPOSITION_PANEL}|panneau Composition}}. Le logo s’affiche à l’écran. Maintenant, examinez le {{definition:{TOOLTIP.TIMELINE_PANEL}|panneau Montage}}. Les fichiers <$APEAK$> (le texte du logo) et le <$Logo$> ont été ajoutés au panneau Montage et correspondent au panneau Composition."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Bon travail !",
+                            "successText": "Vous venez d'apprendre à créer une composition à l'aide des fichiers multimédias existants. Vous apprendrez ensuite à organiser votre composition."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

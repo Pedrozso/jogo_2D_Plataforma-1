@@ -1,0 +1,151 @@
+{
+    "aem_id": "after-effects/how-to/in-app-introduction-and-overview-to-the-program",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "After Effects – Überblick",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "120",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501e94",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}tutorial_introduction-and-overview-to-the-program/Start Here.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}panel-layouts.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Bedienfelder"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Die Benutzeroberfläche von After Effects ist in Bereiche gegliedert, die als „Fenster“ oder „Bedienfelder“ bezeichnet werden."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Rechts neben diesem Fenster (dem Trainingsbedienfeld) befinden sich die drei Hauptfenster, mit denen Sie arbeiten. Die animierte Grafik oben zeigt, wo sich diese Fenster auf der Benutzeroberfläche befinden."
+                        },
+                        {
+                            "type": "list",
+                            "listItems": [
+                                {
+                                    "text": "Fenster 1: <$Projektfenster$><br>Importieren und organisieren Sie die {{definition:{TOOLTIP.PROJECT_PANEL}|media assets}}, die Sie in Ihrem Projekt verwenden werden."
+                                },
+                                {
+                                    "text": "Fenster 2 – <$Kompositionsfenster$><br>Hier zeigen Sie eine Vorschau Ihres Projekts an, während Sie es erstellen."
+                                },
+                                {
+                                    "text": "Fenster 3 – <$Schnittfenster$><br>Hier ordnen Sie Ihre Medienassets an und bearbeiten sie, um Ihr aktuelles Projekt zu erstellen."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}modifying-panels.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Anpassen von Fenstern"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Bei Fenstern haben Sie folgende Möglichkeiten:"
+                        },
+                        {
+                            "type": "list",
+                            "listItems": [
+                                {
+                                    "text": "Sie können ihre Größe ändern."
+                                },
+                                {
+                                    "text": "Sie können die Verankerung aufheben und Fenster verschieben."
+                                },
+                                {
+                                    "text": "Sie können Fenster nebeneinander im gleichen Fensterbereich platzieren."
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "text": "Wichtig: Üben Sie diese Aufgaben mithilfe der oben gezeigten animierten Grafik als Referenz, bevor Sie die interaktiven Tutorials verwenden."
+                        },
+                        {
+                            "type": "well",
+                            "wellType": "hint",
+                            "texts": [
+                                "Wenn Sie den Arbeitsbereich versehentlich ändern, können Sie das Originallayout wiederherstellen, indem Sie im Anwendungsmenü <$Fenster > Arbeitsbereich > Auf gespeichertes Layout zurücksetzen$> auswählen."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Herzlichen Glückwunsch!",
+                            "successText": "Nun haben Sie das Tutorial zur Übersicht über die After Effects-Oberfläche abgeschlossen. Als Nächstes lernen Sie die Grundlagen zu After Effects, indem Sie ein animiertes Logo erstellen."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

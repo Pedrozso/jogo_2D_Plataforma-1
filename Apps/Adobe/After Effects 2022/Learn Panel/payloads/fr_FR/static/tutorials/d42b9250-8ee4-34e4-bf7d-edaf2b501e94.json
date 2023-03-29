@@ -1,0 +1,151 @@
+{
+    "aem_id": "after-effects/how-to/in-app-introduction-and-overview-to-the-program",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Présentation d’After Effects",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "120",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501e94",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}tutorial_introduction-and-overview-to-the-program/Start Here.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}panel-layouts.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Panneaux"
+                        },
+                        {
+                            "type": "text",
+                            "text": "L’interface After Effects est organisée en zones appelées panneaux."
+                        },
+                        {
+                            "type": "text",
+                            "text": "À droite de ce panneau (le panneau Apprendre), vous trouverez les trois panneaux principaux que vous allez utiliser. Utilisez le graphique animé ci-dessus comme référence pour l’emplacement de ces panneaux dans l’interface."
+                        },
+                        {
+                            "type": "list",
+                            "listItems": [
+                                {
+                                    "text": "Panneau 1 : <$Panneau Projet$><br>Importez et organisez les {{definition:{TOOLTIP.PROJECT_PANEL}|media assets}} que vous utiliserez dans votre projet."
+                                },
+                                {
+                                    "text": "Panneau 2 : <$Panneau Composition$><br>Prévisualisez votre projet à mesure que vous le créez."
+                                },
+                                {
+                                    "text": "Panneau 3 : <$Panneau Montage$><br>Réorganisez et modifiez vos ressources multimédias pour créer votre projet."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}modifying-panels.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Réglage des panneaux"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Les panneaux peuvent être :"
+                        },
+                        {
+                            "type": "list",
+                            "listItems": [
+                                {
+                                    "text": "Redimensionnés"
+                                },
+                                {
+                                    "text": "Non-ancrés et déplacés"
+                                },
+                                {
+                                    "text": "Placés l'un à côté de l'autre dans la même zone de panneau"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "text": "Important : utilisez le graphique animé ci-dessus comme référence et exécutez ces tâches avant de commencer les tutoriels interactifs."
+                        },
+                        {
+                            "type": "well",
+                            "wellType": "hint",
+                            "texts": [
+                                "Si vous modifiez par erreur votre espace de travail, vous pouvez le rétablir dans le menu de l’application en accédant à <$Fenêtre > Espace de travail > Réinitialiser la mise en page enregistrée$>."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Félicitations !",
+                            "successText": "Vous venez de compléter la partie sur l'interface d'After Effects. Découvrez maintenant les principes de base d’After Effects en créant un logo animé."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

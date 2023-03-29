@@ -1,0 +1,455 @@
+{
+    "aem_id": "after-effects/how-to/in-app-add-an-effect",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Anwenden eines visuellen Effekts",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "360",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea3",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Add an Effect.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-blur-from-nav.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Anwenden eines Weichzeichnungseffekts"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Im letzten Tutorial haben wir das Logo animiert, indem wir seine Position im Zeitverlauf geändert haben. In diesem Tutorial wenden wir einen visuellen Effekt auf das Hintergrundvideo an."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Es gibt unendlich viele Effekte, die Sie auf dieses Video anwenden könnten. Wir beschränken uns auf einen einfachen Weichzeichnungseffekt."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Wählen Sie die Ebene Summer_Forest.mp4 im Schnittfenster.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Klicken Sie im Anwendungsmenü oben im Bildschirm auf <$Effekt > Weich- und Scharfzeichnen > Feld schnell weichzeichnen$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "hasEffect",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Im Video ist noch kein Weichzeichnungseffekt sichtbar, aber das ist ganz normal. Im nächsten Schritt passen Sie die Einstellung an. Der Effekt wurde auf die Ebene Summer_Forest.mp4 angewendet und das Effekteinstellungsfenster wurde ebenfalls als Registerkarte neben dem Projektfenster geöffnet."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}change-blur-radius.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Anpassen der Effekteinstellungen"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Sie können die Einstellungen für jeden Effekt anpassen, den Sie aus dem Effekteinstellungsfenster oder dem Schnittfenster hinzufügen. In diesem Beispiel arbeiten Sie hauptsächlich im Schnittfenster."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Passen wir nun die Effekteinstellungen an, um den Weichzeichnungseffekt zu erstellen."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Erweitern Sie die Einstellungen für die Ebene <$Summer_Forest.mp4$>, indem Sie auf den Pfeil links neben dem Ebenennamen klicken, um die Einstellungen „Effekt“, „Transformieren“ und „Audio“ anzuzeigen."
+                                },
+                                {
+                                    "text": "Erweitern Sie die Option <$Effekt$> der Ebene Summer_Forest.mp4 und dann den Effekt <$Feld schnell weichzeichnen$>."
+                                },
+                                {
+                                    "text": "Suchen·Sie·in·den·Effekteinstellungen·<$Feld schnell weichzeichnen$> die Eigenschaft <$Weichzeichnungsradius$> und legen Sie <$25$> fest.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "value": [
+                                                    20,
+                                                    30
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Sie haben den Weichzeichnungseffekt auf das Hintergrundvideo angewendet, indem Sie den Weichzeichnungsradius von 0 in 25 geändert haben."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}set-first-keyframe.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Hinzufügen von Keyframes zum Animieren von Effekten"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Nun möchten wir den Weichzeichnungseffekt allmählich auf das Video Summer_Forest anwenden, sodass die Umrisse im Video verschwimmen, sobald das Logo auf dem Bildschirm angezeigt wird."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Stellen Sie sicher, dass sich die Marke für die aktuelle Zeit auf der zweiten Markierung befindet (an der die Bewegung des Logos zur Mitte des Bildschirms endet).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": [
+                                                    0.6,
+                                                    3
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Suchen Sie unter <$Feld schnell weichzeichnen$> die Einstellung <$Weichzeichnungsradius$> und klicken Sie auf die Stoppuhr auf der linken Seite.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "count": [
+                                                    1,
+                                                    10
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Sehen Sie sich im Schnittfenster in der Einstellungszeile „Weichzeichnungsradius“ die Marke für die aktuelle Zeit an. Eine kleine blaue Raute sollte angezeigt werden. Wenn Sie das vorhergehende Tutorial zur Animation abgeschlossen haben, wissen Sie, dass diese Raute als <$Keyframe$> bezeichnet wird. Durch Hinzufügen eines Keyframes haben Sie After Effects angewiesen, sich den Wert (25) für den Weichzeichnungsradius an diesem Zeitpunkt (wenn sich das Logo nicht mehr bewegt) zu merken. After Effects speichert diese Informationen in einem Keyframe."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-cti-and-change-blur.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ändern von Effekten im Zeitverlauf"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Sie haben die Endwerte für den Weichzeichnungsradius und die Position festgelegt. Jetzt müssen Sie noch die Anfangswerte für den Weichzeichnungsradius und die Position einstellen."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Bewegen Sie die Marke für die aktuelle Zeit zum Anfang der Komposition.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Ändern Sie unter dem Effekt „Feld schnell weichzeichnen“ den <$Weichzeichnungsradius$> in 0.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "keyframeIndex": 0,
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Sehen Sie sich die Marke für die aktuelle Zeit in der Zeile mit dem Weichzeichnungsradius im Schnittfenster nochmals an. Ein neuer Keyframe sollte angezeigt werden."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}play-result.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Vorschau des Effekts"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Drücken Sie die <%{KEY.SPACEBAR}%>, um zu sehen, wie After Effects den visuellen Effekt mithilfe der eingestellten Keyframes allmählich anwendet.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Das Hintergrundvideo sollte nun allmählich verschwimmen, während das Logo von unten in die Komposition hineinfliegt."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-mirror-effect.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Anwenden mehrerer Effekte"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Wenden wir nun einen letzten Effekt auf das Hintergrundvideo an, um die Komposition noch interessanter zu gestalten."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Wählen Sie die Ebene Summer_Forest.mp4 im Schnittfenster als aktive Ebene aus.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Klicken Sie im Anwendungsmenü oben im Bildschirm auf <$Effekt > Verzerren > Spiegeln$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "hasEffect",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Mirror"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Im Video ist noch kein Spiegelungseffekt sichtbar, aber das ist ganz normal. Im nächsten Schritt passen Sie die Einstellung an. Der Effekt wurde auf die Ebene Summer_Forest.mp4 angewendet und die Einstellungen des Effekts wurden im Effekteinstellungsfenster ebenfalls hinzugefügt."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}adjust-mirror-effect.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ändern der Einstellungen im Effekteinstellungsfenster"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Wenden wir nun den Spiegelungseffekt auf das Hintergrundvideo an."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Suchen Sie im Effekteinstellungsfenster unter <$Effekt Spiegeln$> die Einstellung <$Mittelpunkt$>."
+                                },
+                                {
+                                    "text": "Klicken Sie rechts neben dem Mittelpunkt auf das Quadrat mit der Zielscheibe und klicken Sie genau in die Mitte des Logos im Kompositionsfenster.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Mirror",
+                                                "propertyName": "ADBE Mirror-0001",
+                                                "value": [
+                                                    [
+                                                        700,
+                                                        1200
+                                                    ],
+                                                    [
+                                                        350,
+                                                        800
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Spielen Sie die Komposition ab, um zu beobachten, wie der Effekt auf das Hintergrundvideo angewendet wird.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Der Spiegelungseffekt wurde in der Mitte des Kompositionsfensters angewendet."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Gute Arbeit!",
+                            "successText": "Sie haben gerade gelernt, wie Sie visuelle Effekte in Ihrer Komposition mithilfe des Effektfensters anwenden und einstellen. Als Nächstes erfahren Sie, wie Sie Ihr Projekt in eine Videodatei exportieren."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

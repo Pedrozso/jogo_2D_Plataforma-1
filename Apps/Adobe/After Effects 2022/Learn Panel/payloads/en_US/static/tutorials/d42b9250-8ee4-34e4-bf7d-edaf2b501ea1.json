@@ -1,0 +1,316 @@
+{
+    "aem_id": "after-effects/how-to/in-app-organize-the-composition",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Organize the Composition",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea1",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Organize the Composition.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepPreferenceMods": [
+                        {
+                            "actionName": "setImportPath",
+                            "payload": {
+                                "newVal": "{{pathProjectPayloads}}playlist_the-basics/footage"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}adding-more-media.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Adding More Files to the Composition"
+                        },
+                        {
+                            "type": "text",
+                            "text": "In the last tutorial you created a composition and opened it in the Timeline panel. In this tutorial, you’ll add files to the Timeline panel and organize your composition."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Let’s add a background video behind the logo to create a more visually interesting composition."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Double-click within the {{definition:{TOOLTIP.PROJECT_PANEL}|Project panel}} and add the video file <$Summer_Forest.mp4$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "doesItemExist",
+                                            "payload": {
+                                                "itemName": "Summer_Forest.mp4",
+                                                "itemType": "file"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Drag and drop the <$Summer_Forest.mp4$> file from the Project panel to below the APEAK and Logo files in the Timeline panel.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerAtIndex",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "index": "last"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Look over at the Timeline panel. The Summer_Forest.mp4 video has been added, and you can see those changes in the Composition panel. The Summer_Forest.mp4 video now appears behind the APEAK logo."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-summer-layer-up.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Layers"
+                        },
+                        {
+                            "type": "text",
+                            "text": "When you add files to the Timeline panel, you’re adding different elements, or <$layers$>, to your composition."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Layers are stacked, one on top of the other, to create the different elements of your composition (in this case, the text, logo, and background video)."
+                        },
+                        {
+                            "type": "text",
+                            "text": "You can change how your composition looks based on how you stack and position layers."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "In the left-hand side of the {{definition:{TOOLTIP.TIMELINE_PANEL}|Timeline panel}}, click on the <$Summer_Forest.mp4$> layer and drag it to the top of the composition, above the two logo layers.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerAtIndex",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "index": "first"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Look over at the {{definition:{TOOLTIP.COMPOSITION_PANEL}|Composition panel}}. What’s changed? Can you still see the APEAK logo? Layers at the top of the Timeline panel cover layers below them in the Timeline panel. You can’t see the APEAK logo because the Summer_Forest.mp4 video is covering it."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "setLayerIndex",
+                            "payload": {
+                                "layerName": "Summer_Forest.mp4",
+                                "index": "last"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}trim-logo-layer.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Changing a Layer’s Duration"
+                        },
+                        {
+                            "type": "text",
+                            "text": "The layers have been reset to their original order from the previous step."
+                        },
+                        {
+                            "type": "text",
+                            "text": "The <$colored bars$> on the right-hand side of the Timeline panel represent how long a layer is displayed in the composition. You can change how long a layer is displayed by changing the length of its colored bar. Let’s make the duration of all our layers the same."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Move your cursor to the end of the <$APEAK$> colored bar and click and drag the bar toward the left until it is the same length as the colored bar of the <$Summer_Forest.mp4$> layer. (Hold <%{KEY.SHIFT}%> while dragging to align the bars perfectly.)",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerDuration",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "duration": [
+                                                    8,
+                                                    12
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Repeat this process with the <$Logo$> layer. (Click the layer before holding <%{KEY.SHIFT}%> or else you’ll end up trimming both layers at the same time.)",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerDuration",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "duration": [
+                                                    8,
+                                                    12
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "You trimmed the end of the APEAK and Logo layers to match the length of the background video."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}shift-logo-layer.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Changing When a Layer Appears"
+                        },
+                        {
+                            "type": "text",
+                            "text": "The position of where a layer’s colored bar starts represents when it first appears in the composition. You can adjust when a layer first appears by changing the starting position of its colored bar. Let’s make the APEAK layer appear slightly after the other two layers."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Move your cursor to the front of the APEAK colored bar, then click and drag its front until it reaches approximately one second in the composition. (A small blue marker has been placed at the one-second position as a reference.)",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerStart",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "duration": [
+                                                    1,
+                                                    3
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Press <%{KEY.SPACEBAR}%> to play the composition from the beginning to preview the change.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "The APEAK text now appears at the one-second mark in the composition, after the logo and the background video have already started playing. Starting from left to right, layers appear in the order that their colored bars begin."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Great Job!",
+                            "successText": "You just learned how to organize your composition using layers. Next, you’ll learn how to animate the layers and make your logo move."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

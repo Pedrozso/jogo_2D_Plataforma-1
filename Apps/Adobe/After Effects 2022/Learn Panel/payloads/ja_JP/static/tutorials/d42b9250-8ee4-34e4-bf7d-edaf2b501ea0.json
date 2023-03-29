@@ -1,0 +1,176 @@
+{
+    "aem_id": "after-effects/how-to/in-app-create-a-composition",
+    "metadata": {
+        "descriptions": {
+            "medium": "Learn how to create an After Effects composition.",
+            "short": "Learn how to create an After Effects composition.",
+            "long": "Learn how to create an After Effects composition."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "コンポジションの作成",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea0",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Create a Composition.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepPreferenceMods": [
+                        {
+                            "actionName": "setImportPath",
+                            "payload": {
+                                "newVal": "{{pathProjectPayloads}}playlist_the-basics/footage"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}new-comp-from-footage.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "フッテージからのコンポジションの作成"
+                        },
+                        {
+                            "type": "text",
+                            "text": "After Effects は、コンポジションを作成するためのあらゆる機能を備えています。テキスト、ビデオ、サウンドなどの様々なオーディオ要素やビジュアル要素を組み合わせたり、合成したりできます。さらに、それらの要素を楽しくクリエイティブな方法で動かすことができます。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "After Effects プロジェクトの最初の手順では、作業対象のメディアを読み込み、コンポジションを作成します。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "<$コンポジションパネル$>で、「<$フッテージから新規コンポジションを作成$>」をクリックします。"
+                                },
+                                {
+                                    "text": "まず、Adobe Illustrator ファイル APEAK_Logo.ai を選択し、<$読み込みの種類$>の設定を「フッテージ」から「<$コンポジション$>」に変更し、「{BUTTON.IMPORT_IN_DIALOG.{{osName}}}」をクリックします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "projectItemAdded",
+                                            "payload": {
+                                                "itemType": "composition"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "{{definition:{TOOLTIP.PROJECT_PANEL}|プロジェクトパネル}}を確認します。2 つのアイテム、つまりロゴを使用して作成したコンポジション、そして元のロゴファイルのあるフォルダーが表示されます。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "setItemSelected",
+                            "payload": {
+                                "itemName": "APEAK_Logo",
+                                "selected": false
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}opening-comp.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "コンポジションを開く"
+                        },
+                        {
+                            "type": "text",
+                            "text": "{{definition:{TOOLTIP.COMPOSITION}|コンポジション}}を作成したら、編集するために<$タイムラインパネル$>でこのコンポジションを開く必要があります。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "プロジェクトパネルで <$APEAK_Logo$> コンポジションをダブルクリックします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isCompositionActive",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "{{definition:{TOOLTIP.COMPOSITION_PANEL}|コンポジションパネル}}を確認してください。ロゴが画面に表示されるようになりました。{{definition:{TOOLTIP.TIMELINE_PANEL}|タイムラインパネル}}を見ると、<$APEAK$> (ロゴテキスト) や<$ロゴ$> (ロゴ自体) などのファイルがタイムラインパネルに追加され、コンポジションパネルの内容と一致していることが分かります。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "よくできました！",
+                            "successText": "既存のメディアファイルを使用してコンポジションを作成する方法を学習しました。次に、コンポジションの整理方法を学習します。"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

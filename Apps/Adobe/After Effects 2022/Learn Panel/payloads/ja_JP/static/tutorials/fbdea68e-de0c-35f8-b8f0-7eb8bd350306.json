@@ -1,0 +1,44 @@
+{
+    "id": "b6c91a04-d485-4608-8316-ec1f5f7667ed",
+    "aem_id": "playlist/after-effects/video/playlist_the-basics",
+    "playlistUUID": "fbdea68e-de0c-35f8-b8f0-7eb8bd350306",
+    "status": "live",
+    "title": "基礎の学習",
+    "tutorial_ids": [
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501ea0",
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501ea1",
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501ea2",
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501ea3",
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501ea4"
+    ],
+    "created_on": "Mon Dec 17 22:21:52 UTC 2018",
+    "modified_on": "Mon Dec 17 22:21:52 UTC 2018",
+    "published_on": "Thu Dec 13 13:13:32 UTC 2018",
+    "description": "After Effects でアニメーションロゴを作成するための基礎が学べる 5 つのチュートリアル。各チュートリアルでは、基本的な After Effects ワークフローにおいて必要な手順を説明します。",
+    "type": "the-basics",
+    "header": "このチュートリアルシリーズでは、アニメーションロゴを作成します。<br><br>各チュートリアルはインタラクティブな学習を意図して設計されており、ガイドに従って操作することにより学習効果を最大化できます。各チュートリアルでは、既に完了した以前の手順を使用して新しいプロジェクトを開くので、作業を保存する必要はありません。",
+    "level": "beginner",
+    "stage": "begin",
+    "applications": {
+        "sap_code": [
+            "AEFT"
+        ],
+        "fi_code": [
+            "aftereffects_cc"
+        ]
+    },
+    "platforms": [
+        "in-app"
+    ],
+    "creative_fields": [
+        "video"
+    ],
+    "topics": [
+        "creative-cloud-for-video"
+    ],
+    "images": {
+        "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg",
+        "hero": "{{pathPanelPayloadsWithKey}}banner.jpg"
+    },
+    "total_duration": 1200
+}

@@ -1,0 +1,151 @@
+{
+    "aem_id": "after-effects/how-to/in-app-introduction-and-overview-to-the-program",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "After Effects Overview",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "120",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501e94",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}tutorial_introduction-and-overview-to-the-program/Start Here.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}panel-layouts.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Panels"
+                        },
+                        {
+                            "type": "text",
+                            "text": "The After Effects interface is organized into areas called panels."
+                        },
+                        {
+                            "type": "text",
+                            "text": "To the right of this panel (the Learn panel) you’ll find the three main panels you’ll be working with. Use the animated graphic above as a reference to where these panels are located in the interface."
+                        },
+                        {
+                            "type": "list",
+                            "listItems": [
+                                {
+                                    "text": "Panel 1: <$Project panel$><br>Import and organize the {{definition:{TOOLTIP.PROJECT_PANEL}|media assets}} you’ll use in your project."
+                                },
+                                {
+                                    "text": "Panel 2: <$Composition panel$><br>Preview your project as you create it."
+                                },
+                                {
+                                    "text": "Panel 3: <$Timeline panel$><br>Arrange and edit your media assets to create your actual project."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}modifying-panels.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Adjust Panels"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Panels can be:"
+                        },
+                        {
+                            "type": "list",
+                            "listItems": [
+                                {
+                                    "text": "Resized"
+                                },
+                                {
+                                    "text": "Undocked and moved around"
+                                },
+                                {
+                                    "text": "Placed next to each other within the same panel area"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "text": "Important: Use the animated graphic above as a reference, and practice these tasks before starting the interactive tutorials."
+                        },
+                        {
+                            "type": "well",
+                            "wellType": "hint",
+                            "texts": [
+                                "If you accidentally change your workspace, you can reset it to its original layout in the application by choosing <$Window > Workspace > Reset to Saved Layout$>."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Congratulations!",
+                            "successText": "You’ve just completed the overview of the After Effects interface. Now learn the basics of After Effects by creating an animated logo."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

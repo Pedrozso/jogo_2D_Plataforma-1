@@ -1,0 +1,437 @@
+{
+    "aem_id": "after-effects/how-to/in-app-animate-layers",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Animate Layers",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea2",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Animate Layers.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "openProject",
+                            "payload": {
+                                "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Animate Layers.aet",
+                                "openOnlyIfNotAlreadyOpened": true
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-logo-to-bottom.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Preparing Layers for Animation"
+                        },
+                        {
+                            "type": "text",
+                            "text": "After Effects is all about making things move in fun and creative ways, so let’s make the logo fly onscreen at the start of the composition. We’ll do this using <$animation$>."
+                        },
+                        {
+                            "type": "text",
+                            "text": "To create this animation, we first have to tell After Effects when and from where we want the logo to start moving. Let’s have it enter from the bottom of the screen."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Move the {{definition:{TOOLTIP.CURRENT_TIME_INDICATOR}|Current Time Indicator}} to the beginning of the timeline (if it’s not already there).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "In the {{definition:{TOOLTIP.TIMELINE_PANEL}|Timeline panel}}, select the <$Logo$> layer to make it the active layer.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "In the {{definition:{TOOLTIP.COMPOSITION_PANEL}|Composition panel}}, click on the actual logo itself and slowly drag it to the bottom of the screen, just until it disappears from view (hold <%{KEY.SHIFT}%> while dragging to move it in a straight line).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "value": [
+                                                    false,
+                                                    [
+                                                        1000,
+                                                        1400
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "You just moved the logo to the bottom of the screen. This position will be the starting point of the animation."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}expand-properties.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Setting Keyframes"
+                        },
+                        {
+                            "type": "text",
+                            "text": "We now have to tell After Effects that we want the layer to start moving at this time and from this position."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Expand the <$Logo$> layer properties by clicking on the arrow to the left of the layer name to reveal its <$Transform$> settings."
+                                },
+                                {
+                                    "text": "Expand the <$Transform$> settings and find the <$Position$> property."
+                                },
+                                {
+                                    "text": "Click on the small stop watch to the left of the Position property.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "count": [
+                                                    1,
+                                                    10
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Look in the Timeline panel at the Position row where the Current Time Indicator is. You should see a little blue diamond. This diamond is called a <$keyframe$>. By adding a keyframe, you just told After Effects that you want it to remember the position of the Logo (off the bottom of the screen) at that current time (the beginning of the composition). After Effects stores all that information in the keyframe."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}drag-logo-up.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Changing a Layer Over Time"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Keyframes are important because they play an essential role in creating animation in After Effects. Watch what happens when you move the logo back to the center of the screen and set another keyframe at a different time."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Move the {{definition:{TOOLTIP.CURRENT_TIME_INDICATOR}|Current Time Indicator}} to one second in the composition (a blue marker has been placed at the one-second mark for your reference).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": [
+                                                    0.6,
+                                                    2
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "In the Timeline panel, select the <$Logo$> layer to make it the active layer.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Immediately to the right of the Position setting, find the two blue numbers that represent the horizontal and vertical position of the logo in the composition."
+                                },
+                                {
+                                    "text": "Click within the vertical position (the second number) and change its value to <$516$> to return the logo to the center of the Composition panel.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "count": [
+                                                    2,
+                                                    10
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "value": [
+                                                    false,
+                                                    [
+                                                        200,
+                                                        700
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Look again in the Timeline panel at the Position row where the Current Time Indicator is. You should see that a new keyframe has been added."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}play-back.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Previewing the Animation"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Move the Current Time Indicator back to the beginning and press the <%{KEY.SPACEBAR}%> to see how After Effects animates the logo using the keyframes you set.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "You saw the logo fly in from the bottom of the Composition panel and stop in the middle after one second. Congratulations! You just animated your first logo."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "openProject",
+                            "payload": {
+                                "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Animate Layers 2.aet",
+                                "openOnlyIfNotAlreadyOpened": true
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "imageFullLarge",
+                            "imgUrl": "{{pathPanelPayloadsWithKey}}animation-practice.png"
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Animation Practice"
+                        },
+                        {
+                            "type": "text",
+                            "text": "In this next section, you have the opportunity to reinforce your learning by trying a short animation challenge, similar to the example you just saw in the previous steps."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Click <$Next$> to continue to the challenge."
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}logo-title-fade-in.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Challenge"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Using the animated graphic above as a reference, use what you know about changing a layer’s properties over time to fade the APEAK text in as it appears on screen. Use the hints below to help.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "propertyName": "opacity",
+                                                "value": 0,
+                                                "keyframeIndex": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "propertyName": "opacity",
+                                                "value": 100,
+                                                "keyframeIndex": 1
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Hint 1",
+                            "icon": "hint",
+                            "texts": [
+                                "To animate the logo, you changed its Position property. Think about which Transform properties you would change to create a fade-in effect."
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Hint 2",
+                            "icon": "hint",
+                            "texts": [
+                                "Opacity can create our fade, but what two things must you tell After Effects so that it knows how you want the Opacity to change?"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Hint 3",
+                            "icon": "hint",
+                            "texts": [
+                                "You must set the starting point of the Opacity and an ending point of the Opacity. What two Opacity values would create the fade animation?"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Hint 4",
+                            "icon": "hint",
+                            "texts": [
+                                "Move the Current Time Indicator to the beginning of the <$APEAK$> layer and click on the <$stopwatch$> next to the <$Opacity$> parameter to create a <$keyframe$> and set it to <$0$>. Then move the Current Time Indicator toward the right to the two-second mark and change the Opacity to <$100$> to automatically set another keyframe."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Great Job!",
+                            "successText": "You just learned how to animate a layer by changing its position over time. Next, you’ll learn how to add visual effects to the composition."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

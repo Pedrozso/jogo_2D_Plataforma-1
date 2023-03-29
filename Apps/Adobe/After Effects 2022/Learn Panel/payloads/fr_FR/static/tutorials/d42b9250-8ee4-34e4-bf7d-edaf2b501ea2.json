@@ -1,0 +1,437 @@
+{
+    "aem_id": "after-effects/how-to/in-app-animate-layers",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Animation du calque",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea2",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Animate Layers.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "openProject",
+                            "payload": {
+                                "projectUrl": "{{pathProjectPayloads}}grouped_the-basics/Animate Layers.aet",
+                                "openOnlyIfNotAlreadyOpened": true
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-logo-to-bottom.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Préparation des calques pour l’animation"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Une des qualités d’After Effects est de rendre votre expérience plus amusante et créative, faisons donc apparaitre le logo à l’écran au début de la composition. Nous allons effectuer cette opération en utilisant <$animation$>."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Pour créer cette animation, vous devez d’abord indiquer à After Effects quand et à partir d’où le logo doit commencer à se déplacer. Faisons-le entrer à partir du bas de l’écran."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Déplacez l’indicateur d’instant présent au début du montage (le cas échéant).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Dans le {{definition:{TOOLTIP.TIMELINE_PANEL}|panneau Montage}}, sélectionnez le calque <$Logo$> pour en faire le calque actif.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Dans le {{definition:{TOOLTIP.COMPOSITION_PANEL}|panneau Composition}}, cliquez sur le logo lui-même et faites-le glisser vers le bas de l’écran, jusqu’à ce qu’il disparaisse de l’écran (maintenez <%{KEY.SHIFT}%> tout en faisant glisser le pointeur pour le déplacer en ligne droite).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "value": [
+                                                    false,
+                                                    [
+                                                        1000,
+                                                        1400
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Vous venez de placer le logo en bas de l'écran. Cette position sera le point de départ de l'animation."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}expand-properties.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Définition des images-clés"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Nous devons maintenant indiquer à After Effects que le calque doit démarrer à ce stade et à partir de cette position."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Développez les propriétés <$Logo$> en cliquant sur la flèche à gauche du nom du calque pour afficher les paramètres <$Transformation$>. "
+                                },
+                                {
+                                    "text": "Développez les paramètres <$Transformation$> et recherchez la propriété <$Position$>."
+                                },
+                                {
+                                    "text": "Cliquez sur le petit chronomètre à gauche de la propriété Position.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "count": [
+                                                    1,
+                                                    10
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Regardez dans le panneau Montage, dans la ligne Position où se trouve l’indicateur d’instant présent. Vous pouvez voir un losange bleu appelé <$image-clé$>. En ajoutant une image-clé, vous venez d’indiquer à After Effects que vous souhaitez faire apparaître la position du logo (en bas de l’écran). After Effects enregistre toutes les informations dans l’image-clé."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}drag-logo-up.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Changement progressif du calque"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Les images-clés sont importantes car elles jouent un rôle essentiel dans la création d’une animation dans After Effects. Observez ce qui se produit lorsque vous déplacez le logo au centre de l’écran et définissez une autre image-clé à un instant différent."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Déplacez l’{{definition:{TOOLTIP.CURRENT_TIME_INDICATOR}|indicateur d’instant présent}} à une seconde dans la composition (un marqueur bleu a été placé sur une seconde pour votre référence).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": [
+                                                    0.6,
+                                                    2
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Dans le panneau Montage, sélectionnez le calque <$Logo$> pour en faire le calque actif.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Juste à droite du paramètre Position, recherchez les deux nombres bleus représentant la position horizontale et verticale du logo dans la composition."
+                                },
+                                {
+                                    "text": "Cliquez à l’intérieur de la position verticale (le second numéro) et remplacez sa valeur par <$516$> pour renvoyer le logo au centre du panneau Composition.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "count": [
+                                                    2,
+                                                    10
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "value": [
+                                                    false,
+                                                    [
+                                                        200,
+                                                        700
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Regardez à nouveau dans le panneau Montage sur la ligne Position où l’indicateur d’instant présent se trouve, vous verrez qu’une nouvelle image-clé a été créée."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}play-back.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Pré-visualisation de l'animation"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Déplacez l’indicateur d’instant présent au début et appuyez sur la <%{KEY.SPACEBAR}%> pour voir comment After Effects a créé l’animation à l’aide des images-clés que vous avez définies.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Le logo doit maintenant pouvoir être déplacé à partir du bas du panneau Composition et s'arrêter au milieu après une seconde. Félicitations ! Vous venez d’effectuer votre première animation de logo."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "openProject",
+                            "payload": {
+                                "projectUrl": "{{pathProjectPayloads}}grouped_the-basics/Animate Layers 2.aet",
+                                "openOnlyIfNotAlreadyOpened": true
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "imageFullLarge",
+                            "imgUrl": "{{pathPanelPayloadsWithKey}}animation-practice.png"
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Pratique d’animation"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Dans cette section suivante, vous avez la possibilité de renforcer vos connaissances en vous lançant un court défi d’apprentissage d’animation, comme l’illustre l’exemple précédent."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Cliquez sur <$Suivant$> pour passer au défi."
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}logo-title-fade-in.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Défi"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "En vous servant de l’image animée ci-dessus comme référence, utilisez les informations dont vous disposez concernant la modification des propriétés d’un calque pour faire apparaitre le texte APEAK tel qu’il apparaît à l’écran. Utilisez les conseils ci-dessous.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "propertyName": "opacity",
+                                                "value": 0,
+                                                "keyframeIndex": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "propertyName": "opacity",
+                                                "value": 100,
+                                                "keyframeIndex": 1
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Conseil 1",
+                            "icon": "hint",
+                            "texts": [
+                                "Pour le logo dont vous avez modifié le paramètre Position, réfléchissez aux propriétés de transformation que vous pouvez modifier pour créer une animation fondue"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Conseil 2",
+                            "icon": "hint",
+                            "texts": [
+                                "L’opacité peut créer notre fondu, mais quels sont les deux éléments à indiquer à After Effects pour déterminer comment modifier l’opacité ?"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Conseil 3",
+                            "icon": "hint",
+                            "texts": [
+                                "Vous devez définir le point de démarrage ainsi qu’un point final de l'opacité. Quelles sont les deux valeurs d'opacité pour créer l'animation fondue ?"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Conseil 4",
+                            "icon": "hint",
+                            "texts": [
+                                "Déplacez l’indicateur d’instant présent au début du calque <$APEAK$> et cliquez sur <$chronomètre$> en regard du paramètre <$Opacité$> pour créer une <$image-clé$> et la définir sur <$0$>. Ensuite, déplacez l’indicateur d’instant présent vers la droite à la marque de 2 secondes et réglez l’opacité sur <$100$> pour définir automatiquement une autre image-clé."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Bon travail !",
+                            "successText": "Vous venez d’apprendre comment animer un calque en changeant progressivement sa position. Vous apprendrez ensuite comment ajouter des effets visuels à la composition."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,455 @@
+{
+    "aem_id": "after-effects/how-to/in-app-add-an-effect",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Ajout d'un effet visuel",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "360",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea3",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Add an Effect.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-blur-from-nav.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ajout d’un effet de flou"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Dans le dernier tutoriel, nous avons ajouté une animation à notre logo en modifiant sa position progressivement. Dans ce tutoriel, vous ajouterez un effet visuel à la vidéo d’arrière-plan."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Les types d’effets que vous pouvez ajouter à cette vidéo sont infinis. Ajoutez simplement un simple effet de flou."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Dans le panneau Montage, sélectionnez le calque Summer_Forest.mp4",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Dans le menu d’application en haut de l’écran, cliquez sur le bouton <$Effet > Flou et Plus net > Flou encadré accéléré$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "hasEffect",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Votre vidéo n’est pas encore floue, mais c’est normal. Vous pouvez régler le paramètre à l’étape suivante. L’effet a été ajouté au calque Summer_Forest.mp4 et le panneau Options d’effet est également ouvert comme onglet à côté du panneau Projet."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}change-blur-radius.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Réglage des paramètres d’effet"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Vous pouvez régler les paramètres des effets que vous ajoutez à partir du panneau Options d’effet ou du panneau Montage. Dans le cas présent, vous travaillerez principalement dans le panneau Montage."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Réglez les paramètres de l’effet pour créer l’effet de flou."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Développez les paramètres de calque <$Summer_Forest.mp4$> en cliquant sur la flèche située à gauche du nom du calque pour afficher les paramètres Effet, Transformation et Audio."
+                                },
+                                {
+                                    "text": "Développez l’option <$Effet$> du calque Summer_Forest.mp4, puis développez l’effet <$Flou encadré accéléré$>."
+                                },
+                                {
+                                    "text": "Dans les paramètres d’effet <$Flou encadré accéléré$>, recherchez la propriété <$Rayon de flou$> et paramétrez-la sur <$25$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "value": [
+                                                    20,
+                                                    30
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "En modifiant le rayon de flou de 0 à 25, vous appliquez l’effet de flou à la vidéo d’arrière-plan."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}set-first-keyframe.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ajout d’images-clés aux effets Animer"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Il faudra appliquer graduellement l’effet de flou à la vidéo Summer_Forest de sorte que la vidéo soit floue lorsque le logo apparaît à l’écran."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Assurez-vous que l’indicateur d’instant présent est réglé sur 1 seconde (où le logo cesse de bouger au centre de l’écran).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": [
+                                                    0.6,
+                                                    3
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Dans le paramètre <$Flou encadré accéléré$>, recherchez le paramètre <$Rayon de flou$> et cliquez sur le chronomètre à gauche.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "count": [
+                                                    1,
+                                                    10
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Regardez dans le panneau Montage, sélectionnez l’emplacement où figure l’indicateur d’instant présent. Vous devriez voir un petit losange bleu. Si vous avez terminé le tutoriel d’animation précédent, vous savez que ce losange est appelé <$image-clé$>. En ajoutant une image-clé, vous venez d’indiquer à After Effects que vous souhaitez que la valeur du rayon de flou (25) soit mémorisée à l’heure actuelle (lorsque le logo cesse de bouger). After Effects stocke toutes ces informations dans l’image-clé."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-cti-and-change-blur.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Modification des effets progressivement"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Vous devez définir les valeurs de fin du rayon et de la position du flou. Vous devez maintenant définir la valeur et la position du rayon de flou de départ."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Placez l’indicateur d’instant présent au début de la composition.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Sous l’effet Flou rapide encadré, réglez le rayon <$ Rayon de flou$> sur 0.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "keyframeIndex": 0,
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Regardez à nouveau dans le panneau Montage au niveau de la ligne du rayon de flou à l'endroit où se trouve l'indicateur d'instant présent. Une nouvelle image-clé a été créée."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}play-result.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Pré-visualisation de l’effet"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Appuyez sur la barre d’<%{KEY.SPACEBAR}%> pour voir comment After Effects a appliqué l’effet visuel progressivement, à l’aide des images-clés que vous définissez.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "La vidéo d'arrière-plan devrait maintenant devenir de plus en plus floue à mesure que le logo apparaît à partir du bas de l’écran."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-mirror-effect.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ajouter des Effets Multiples"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Ajoutons un effet final à notre vidéo d’arrière-plan pour améliorer la qualité visuelle de notre composition."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Dans le panneau Montage, sélectionnez le calque Summer_Forest.mp4 pour en faire votre calque actif.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Dans le menu d’application en haut de l’écran, cliquez sur <$Effet > Déformer > Miroir$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "hasEffect",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Mirror"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Vous ne pouvez pas voir l’effet Miroir, mais c’est normal. L’effet est modifié à l’étape suivante. L’effet a été ajouté au calque Summer_Forest.mp4 et les paramètres de l’effet ont également été ajoutés au panneau Options d’effet."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}adjust-mirror-effect.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Modification des paramètres dans le panneau Options d’effet"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Appliquez l’effet Miroir à la vidéo d’arrière-plan."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Dans le panneau Options d’effet, recherchez le paramètre <$Centre de Reflection$> sous <$Effet Miroir$>."
+                                },
+                                {
+                                    "text": "À droite du centre, cliquez sur la case carrée avec l’icône cible, puis cliquez directement au centre du logo dans le panneau Composition.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Mirror",
+                                                "propertyName": "ADBE Mirror-0001",
+                                                "value": [
+                                                    [
+                                                        700,
+                                                        1200
+                                                    ],
+                                                    [
+                                                        350,
+                                                        800
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Lisez la composition pour afficher les effets appliqués à la vidéo d’arrière-plan.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "L’effet Miroir a été appliqué au centre du panneau Composition."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Bon travail !",
+                            "successText": "Vous venez d’apprendre à ajouter et modifier des effets visuels dans votre composition à l’aide du panneau Effets. Vous allez ensuite découvrir comment exporter votre projet dans un fichier vidéo."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

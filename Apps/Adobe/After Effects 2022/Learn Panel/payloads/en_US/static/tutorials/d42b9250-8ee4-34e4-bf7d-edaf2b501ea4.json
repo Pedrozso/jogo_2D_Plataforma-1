@@ -1,0 +1,174 @@
+{
+    "aem_id": "after-effects/how-to/in-app-export-your-video",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Export the Composition",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "120",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea4",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Export Your Video.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-to-renderqueue.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Rendering"
+                        },
+                        {
+                            "type": "text",
+                            "text": "The final step of creating the animated logo is to <$render$> the composition. When you render your project, you’re telling After Effects to take all the information about your composition (layer order, effect settings, etc.) and process it to make a viewable movie file."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "In the application menu, choose <$Composition > Add to Render Queue$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "doesRenderQueueItemExist",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Your composition hasn’t rendered quite just yet. Before you finish, you need to check its export settings in the <$Render Queue panel$> to the right."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}set-render-settings.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Render Settings"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Let’s use the most basic rendering settings for now."
+                        },
+                        {
+                            "type": "text",
+                            "text": "In the <$Render Queue panel$> find the <$APEAK_Logo$> composition."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Under the APEAK composition, make sure that <$Render Settings$> is set to <$Best Settings$> and <$Output Module$> is set to <$Lossless$>."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Next to the <$Output To$> option in the center of the Render Queue, click on the blue text to determine the video’s filename and location on your hard drive.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkOutputModuleSettings",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo",
+                                                "nonEmptyField": "Output File Info.Full Flat Path"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Click the <$Render$> button at the right side of the Render Queue panel.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkRenderQueueStatus",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo",
+                                                "status": "startedRender"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Your composition is in the process of rendering! You can track its progress with the blue progress bar at the top of the queue."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Great Job!",
+                            "successText": "You’ve successfully created your first animated logo! This concludes the “Learn the basics” tutorial series.",
+                            "additionalInfo": "For an in-depth overview on this topic and more, watch the full <a href=\"https://helpx.adobe.com/after-effects/tutorials.html\">Get Started with After Effects</a> series from adobe.com."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

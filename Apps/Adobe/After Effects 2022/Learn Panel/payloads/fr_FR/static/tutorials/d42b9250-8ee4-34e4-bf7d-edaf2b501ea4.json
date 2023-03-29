@@ -1,0 +1,174 @@
+{
+    "aem_id": "after-effects/how-to/in-app-export-your-video",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Exportation de la composition",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "120",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea4",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Export Your Video.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-to-renderqueue.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Rendu"
+                        },
+                        {
+                            "type": "text",
+                            "text": "L’étape finale de la création du logo animé consiste à effectuer un <$rendu$> de la composition. Lorsque vous effectuez le rendu du contenu de votre projet, vous indiquez à After Effects d’utiliser toutes les informations relatives à votre composition (l’arrangement du calque, les paramètres d’effet, etc.) pour créer un fichier vidéo visionnable."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Dans la barre de menus de l’application, cliquez sur <$Composition > Ajouter file attente de rendu$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "doesRenderQueueItemExist",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Le rendu de votre composition n’a pas encore abouti. Avant de finir, vous devez vérifier ses paramètres d’exportation dans le <$panneau File d’attente de rendu$> à droite."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}set-render-settings.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Paramètres de rendu"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Utilisons pour l’instant les paramètres de rendu de base."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Dans le panneau <$File d’attente de rendu$>, recherchez la composition <$APEAK_Logo$>."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Sous la composition APEAK, assurez-vous que <$Paramètres de rendu$> est défini sur <$Meilleurs Réglages$>, et <$Module de Sortie$> est défini sur <$Sans perte$>."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "À côté de l’option « Sortie vers » du centre de la file d’attente de rendu, cliquez sur le nom du fichier pour l’enregistrer dans un emplacement sur votre disque dur.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkOutputModuleSettings",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo",
+                                                "nonEmptyField": "Output File Info.Full Flat Path"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Cliquez sur <$Rendu$> sur le côté droit du panneau File d’attente de rendu.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkRenderQueueStatus",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo",
+                                                "status": "startedRender"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Votre composition se trouve dans le processus de rendu ! Vous pouvez suivre sa progression avec la barre de progression bleue en haut de la file d’attente."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Bon travail !",
+                            "successText": "Vous avez créé votre premier logo animé. Ceci conclut le tutoriel « Apprendre les principes de base ».",
+                            "additionalInfo": "Pour une présentation approfondie et détaillée sur ce sujet, regardez la série complète <a href=\"https://helpx.adobe.com/fr/after-effects/tutorials.html\">Démarrez avec After Effects</a> à partir d’adobe.com."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

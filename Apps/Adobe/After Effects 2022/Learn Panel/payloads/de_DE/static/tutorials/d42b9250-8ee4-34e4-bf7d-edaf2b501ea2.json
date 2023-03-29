@@ -1,0 +1,437 @@
+{
+    "aem_id": "after-effects/how-to/in-app-animate-layers",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Animieren von Ebenen",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea2",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Animate Layers.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "openProject",
+                            "payload": {
+                                "projectUrl": "{{pathProjectPayloads}}grouped_the-basics/Animate Layers.aet",
+                                "openOnlyIfNotAlreadyOpened": true
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-logo-to-bottom.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Vorbereiten der Ebenen auf die Animation"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Bei After Effects geht es darum, Objekte auf vielfältige und kreative Art zu bewegen. Lassen wir also das Logo am Anfang in die Komposition hineinfliegen. Dazu verwenden wir <$Animation$>."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Um diese Animation zu erstellen, müssen wir After Effects mitteilen, wann und wo die Bewegung des Logos beginnen soll. Lassen wir das Logo von unten in die Komposition hineinfliegen."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Bewegen Sie die Marke für die aktuelle Zeit zum Anfang der Timeline (wenn sie sich dort nicht bereits befindet).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Wählen Sie im {{definition:{TOOLTIP.TIMELINE_PANEL}|Schnittfenster}} die Ebene <$Logo$>, um sie zu aktivieren.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Klicken Sie im {{definition:{TOOLTIP.COMPOSITION_PANEL}|Kompositionsfenster}} auf das Logo selbst und ziehen Sie es langsam zum unteren Bildschirmrand, bis es nicht mehr zu sehen ist (halten Sie beim Ziehen die <%{KEY.SHIFT}%> gedrückt, um das Logo in einer geraden Linie zu verschieben).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "value": [
+                                                    false,
+                                                    [
+                                                        1000,
+                                                        1400
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Sie haben gerade das Logo an den unteren Bildschirmrand verschoben. Diese Position stellt den Anfangspunkt der Animation dar."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}expand-properties.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Festlegen von Keyframes"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Jetzt müssen wir After Effects mitteilen, dass die Ebene sich ausgehend von diesem Zeitpunkt und dieser Position bewegen soll."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Erweitern Sie die Eigenschaften der Ebene <$Logo$>, indem Sie auf den Pfeil links neben dem Ebenennamen klicken, um die Einstellungen zum <$Transformieren$> anzuzeigen."
+                                },
+                                {
+                                    "text": "Erweitern Sie die Einstellungen <$Transformieren$> und suchen Sie die Eigenschaft <$Position$>."
+                                },
+                                {
+                                    "text": "Klicken Sie auf die kleine Stoppuhr links neben der Eigenschaft „Position“.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "count": [
+                                                    1,
+                                                    10
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Sehen Sie sich im Schnittfenster in der Zeile „Position“ die Marke für die aktuelle Zeit an. Eine kleine blaue Raute sollte angezeigt werden. Diese Raute wird als <$Keyframe$> bezeichnet. Durch Hinzufügen eines Keyframes haben Sie After Effects angewiesen, sich die Position des Logos (unten, außerhalb des Bildschirms) zu diesem Zeitpunkt (Anfang der Komposition) zu merken. After Effects speichert diese Informationen in einem Keyframe."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}drag-logo-up.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ändern einer Ebene im Zeitverlauf"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Keyframes spielen eine wichtige Rolle beim Erstellen einer Animation in After Effects. Beobachten Sie, was geschieht, wenn Sie das Logo wieder in die Mitte des Bildschirms verschieben und einen weiteren Keyframe an einem anderen Zeitpunkt festlegen."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Bewegen Sie die {{definition:{TOOLTIP.CURRENT_TIME_INDICATOR}|Marke für die aktuelle Zeit}} in der Komposition auf eine Sekunde (zu Ihrer Referenz wurde eine blaue Marke auf die Ein-Sekunden-Marke platziert).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": [
+                                                    0.6,
+                                                    2
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Wählen Sie im Schnittfenster die Ebene <$Logo$>, um sie zu aktivieren.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Gleich rechts neben der Einstellung „Position“ werden zwei blaue Zahlen angezeigt, mit denen die horizontale und vertikale Position des Logos in der Komposition angegeben wird."
+                                },
+                                {
+                                    "text": "Klicken Sie auf die vertikale Position (die zweite Zahl) und ändern Sie den Wert in <$516$>, um das Logo wieder in die Mitte des Kompositionsfensters zu verschieben.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "count": [
+                                                    2,
+                                                    10
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "value": [
+                                                    false,
+                                                    [
+                                                        200,
+                                                        700
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Sehen Sie sich im Schnittfenster in der Zeile „Position“ die Marke für die aktuelle Zeit nochmals an. Jetzt sollte ein neuer Keyframe angezeigt werden."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}play-back.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Vorschau der Animation"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Bewegen Sie die Marke für die aktuelle Zeit zurück an den Anfang und drücken Sie die <%{KEY.SPACEBAR}%>, um die Animation, die After Effects mithilfe der festgelegten Keyframes erstellt hat, zu beobachten.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Das Logo sollte jetzt von unten in das Kompositionsfenster hineinfliegen und sich nach einer Sekunde in der Mitte des Fensters befinden. Herzlichen Glückwunsch! Sie haben Ihr erstes Logo animiert."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "openProject",
+                            "payload": {
+                                "projectUrl": "{{pathProjectPayloads}}grouped_the-basics/Animate Layers 2.aet",
+                                "openOnlyIfNotAlreadyOpened": true
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "imageFullLarge",
+                            "imgUrl": "{{pathPanelPayloadsWithKey}}animation-practice.png"
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Übung zur Animation"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Im nächsten Abschnitt können Sie das Gelernte mithilfe einer kurzen Aufgabe zur Animation vertiefen, die dem Beispiel aus den eben gezeigten Schritten ähnlich ist."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Klicken Sie auf <$Weiter$>, um mit der Aufgabe fortzufahren."
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}logo-title-fade-in.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Aufgabe"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Verwenden Sie die animierte Grafik oben als Referenz und wenden Sie an, was Sie über das Ändern der Ebeneneigenschaften im Zeitverlauf gelernt haben, um den Text APEAK auf dem Bildschirm einzublenden. Lesen Sie die Tipps unten, wenn Sie Hilfe benötigen.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "propertyName": "opacity",
+                                                "value": 0,
+                                                "keyframeIndex": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "propertyName": "opacity",
+                                                "value": 100,
+                                                "keyframeIndex": 1
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Tipp 1",
+                            "icon": "hint",
+                            "texts": [
+                                "Für das Logo haben Sie den Parameter „Position“ geändert. Überlegen Sie, welche der Eigenschaften unter „Transformieren“ Sie ändern müssen, um eine Einblendung als Animation zu erstellen."
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Tipp 2",
+                            "icon": "hint",
+                            "texts": [
+                                "Mit der Deckkraft können Sie eine Einblendung erzeugen. Welche zwei Angaben benötigt After Effects jedoch, um zu wissen, wie die Deckkraft geändert werden soll?"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Tipp 3",
+                            "icon": "hint",
+                            "texts": [
+                                "Sie müssen den Anfangs- und Endpunkt der Deckkraft festlegen. Mit welchen beiden Deckkraftwerten wird die Einblendungsanimation erstellt?"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "Tipp 4",
+                            "icon": "hint",
+                            "texts": [
+                                "Bewegen Sie die Marke für die aktuelle Zeit an den Anfang der Ebene <$APEAK$>. Klicken Sie auf die <$Stoppuhr$> neben dem Parameter <$Deckkraft$>, um einen <$Keyframe$> zu erstellen, und legen Sie den Wert <$0$> fest. Bewegen Sie dann die Marke für die aktuelle Zeit nach rechts bis zur Zwei-Sekunden-Markierung und ändern Sie die Deckkraft in <$100$>, um automatisch einen weiteren Keyframe festzulegen."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Gute Arbeit!",
+                            "successText": "Sie haben gerade gelernt, wie Sie eine Ebene animieren, indem Sie ihre Position im Zeitverlauf ändern. Als Nächstes erfahren Sie, wie Sie visuelle Effekte auf die Komposition anwenden."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

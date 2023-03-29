@@ -1,0 +1,316 @@
+{
+    "aem_id": "after-effects/how-to/in-app-organize-the-composition",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Organisation de la composition",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea1",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Organize the Composition.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepPreferenceMods": [
+                        {
+                            "actionName": "setImportPath",
+                            "payload": {
+                                "newVal": "{{pathProjectPayloads}}playlist_the-basics/footage"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}adding-more-media.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ajout de fichiers supplémentaires à la composition"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Dans le dernier tutoriel, vous avez créé une composition et l’avez ouverte dans le panneau Montage. Dans ce tutoriel, vous allez ajouter des fichiers au panneau Montage et organiser votre composition."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Ajoutez une vidéo d’arrière-plan derrière le logo pour créer une composition d’une meilleure qualité visuelle."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Cliquez deux fois sur le {{definition:{TOOLTIP.PROJECT_PANEL}|panneau Projet}} et ajoutez le fichier vidéo <$Forêt_Estivale.mp4$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "doesItemExist",
+                                            "payload": {
+                                                "itemName": "Summer_Forest.mp4",
+                                                "itemType": "file"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Faites glisser le fichier <$Summer_Forest.mp4$> du panneau Projet sous les fichiers APEAK et les fichiers Logo dans le panneau Montage.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerAtIndex",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "index": "last"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Regardez dans le panneau Montage. Le fichier Summer_Forest.mp4 a été ajouté et vous pouvez voir ces modifications dans le panneau Composition. Le fichier Summer_Forest.mp4 apparaît désormais derrière le logo APEAK."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-summer-layer-up.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Calques"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Lorsque vous ajoutez des fichiers au panneau Montage, vous ajoutez différents éléments ou <$calques$> à votre composition."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Les calques sont empilés les uns sur les autres pour créer les différents éléments de votre composition (dans ce cas, le texte, le logo et la vidéo d’arrière-plan)."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Vous pouvez changer l’aspect de votre composition en fonction de la façon dont vous empilez et positionnez les calques."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "À gauche du {{definition:{TOOLTIP.TIMELINE_PANEL}|panneau Montage}}, cliquez sur le calque <$Summer_Forest.mp4$> et faites-le glisser vers la partie supérieure de la composition, au-dessus des deux calques de logo.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerAtIndex",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "index": "first"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Regardez dans le {{definition:{TOOLTIP.COMPOSITION_PANEL}|panneau Composition}}. Qu'est-ce qui a changé ? Pouvez-vous toujours voir le logo APEAK ? Les calques figurant en haut du panneau Montage sont visibles dans le panneau Montage. Vous ne pouvez pas visualiser le logo APEAK car la vidéo Summer_Forest.mp4 le couvre."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "setLayerIndex",
+                            "payload": {
+                                "layerName": "Summer_Forest.mp4",
+                                "index": "last"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}trim-logo-layer.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Modification de la durée d’un calque"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Les calques ont été réinitialisés dans leur ordre initial à partir de l’étape précédente."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Les <$barres colorées$> à droite du panneau Montage représentent la durée d’affichage d’un calque dans la composition. Vous pouvez modifier la durée d’affichage d’un calque en modifiant la longueur de sa barre colorée. La durée de tous les calques doit être identique."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Déplacez votre curseur jusqu’à la fin de la barre colorée <$APEAK$>, puis faites glisser la barre vers la gauche jusqu’à ce qu’elle soit identique à la barre colorée du calque <$Summer_Forest.mp4$> (maintenez <%{KEY.SHIFT}%> tout en faisant glisser les barres pour les aligner parfaitement).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerDuration",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "duration": [
+                                                    8,
+                                                    12
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Répétez ce processus avec le calque <$Logo$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerDuration",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "duration": [
+                                                    8,
+                                                    12
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Vous avez raccordé la fin des calques APEAK et de logo pour qu’ils s’alignent à la longueur de la vidéo d’arrière-plan."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}shift-logo-layer.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Modification d’un calque"
+                        },
+                        {
+                            "type": "text",
+                            "text": "La position de la barre colorée d'un calque commence là où elle apparaît en premier dans la composition. Vous pouvez régler la position de départ du calque en modifiant la position de départ de sa barre colorée. Faisons apparaître le calque APEAK légèrement après les deux autres calques."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Déplacez votre curseur à l’avant de la barre colorée APEAK, puis cliquez et faites glisser sa partie du devant jusqu’à ce qu’il atteigne environ une seconde dans la composition (un petit marqueur bleu a été placé à la position d’une seconde).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerStart",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "duration": [
+                                                    1,
+                                                    3
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Appuyez sur <%{KEY.SPACEBAR}%> pour lire la composition depuis le début afin de prévisualiser la modification. ",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Bravo !",
+                                        "texts": [
+                                            "Le texte APEAK s’affiche à présent à la marque d’une seconde dans la composition, une fois que le logo et la vidéo d’arrière-plan ont déjà commencé à être lus. À partir de la gauche, les calques apparaissent dans l’ordre dans lequel leurs barres de couleur commencent."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Bon travail !",
+                            "successText": "Vous venez d’apprendre comment organiser votre composition à l’aide des calques. Ensuite, vous allez apprendre à animer les calques et à déplacer le logo."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

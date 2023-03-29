@@ -1,0 +1,40 @@
+{
+    "id": "b6c91a04-d485-4608-8316-ec1f5f7667ed",
+    "aem_id": "playlist/after-effects/video/playlist_start-here",
+    "playlistUUID": "b8ccb44a-2aa7-363b-9514-8de4ea25af3c",
+    "status": "live",
+    "title": "After Effects 간략하게 살펴보기",
+    "tutorial_ids": [
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501e94"
+    ],
+    "created_on": "Mon Dec 17 22:21:52 UTC 2018",
+    "modified_on": "Mon Dec 17 22:21:52 UTC 2018",
+    "published_on": "Thu Dec 13 13:13:32 UTC 2018",
+    "description": "인터페이스 및 시작하는 데 필요한 기본 사항을 2분 동안 간략히 살펴보는 과정입니다.",
+    "type": "start-here",
+    "header": "null",
+    "level": "beginner",
+    "stage": "begin",
+    "applications": {
+        "sap_code": [
+            "AEFT"
+        ],
+        "fi_code": [
+            "aftereffects_cc"
+        ]
+    },
+    "platforms": [
+        "in-app"
+    ],
+    "creative_fields": [
+        "video"
+    ],
+    "topics": [
+        "creative-cloud-for-video"
+    ],
+    "images": {
+        "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg",
+        "hero": "{{pathPanelPayloadsWithKey}}banner.jpg"
+    },
+    "total_duration": 120
+}

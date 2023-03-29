@@ -1,0 +1,316 @@
+{
+    "aem_id": "after-effects/how-to/in-app-organize-the-composition",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Organisieren der Komposition",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea1",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Organize the Composition.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepPreferenceMods": [
+                        {
+                            "actionName": "setImportPath",
+                            "payload": {
+                                "newVal": "{{pathProjectPayloads}}playlist_the-basics/footage"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}adding-more-media.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Hinzufügen weiterer Dateien zur Komposition"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Im letzten Tutorial haben Sie eine Komposition erstellt und im Schnittfenster geöffnet. In diesem Tutorial fügen Sie Dateien im Schnittfenster hinzu und organisieren Ihre Komposition."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Fügen wir nun ein Hintergrundvideo ein, das hinter dem Logo abgespielt wird, um eine visuell interessantere Komposition zu erstellen."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Doppelklicken Sie in das {{definition:{TOOLTIP.PROJECT_PANEL}|Projektfenster}} und fügen Sie die Videodatei <$Summer_Forest.mp4$> hinzu.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "doesItemExist",
+                                            "payload": {
+                                                "itemName": "Summer_Forest.mp4",
+                                                "itemType": "file"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Ziehen Sie die Datei <$Summer_Forest.mp4$> aus dem Projektfenster unter die APEAK- und Logo-Datei im Schnittfenster.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerAtIndex",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "index": "last"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Betrachten Sie das Schnittfenster. Die Datei Summer_Forest.mp4 wurde hinzugefügt und Sie können diese Änderungen im Kompositionsfenster sehen. Die Datei Summer_Forest.mp4 wird jetzt hinter dem APEAK-Logo angezeigt."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-summer-layer-up.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ebenen"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Wenn Sie im Schnittfenster Dateien hinzufügen, wird Ihre Komposition um verschiedene Elemente oder <$Ebenen$> erweitert."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Ebenen werden übereinander gestapelt, um die verschiedenen Elemente Ihrer Komposition (in diesem Fall den Text, das Logo und das Hintergrundvideo) darzustellen."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Sie können den Look Ihrer Komposition ändern, indem Sie die Ebenen anders stapeln und positionieren."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Klicken Sie links im {{definition:{TOOLTIP.TIMELINE_PANEL}|Schnittfenster}} auf die Ebene <$Summer_Forest.mp4$> und ziehen Sie sie ganz nach oben über die beiden Logo-Ebenen in der Komposition.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerAtIndex",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "index": "first"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Betrachten Sie das {{definition:{TOOLTIP.COMPOSITION_PANEL}|Kompositionsfenster}}. Was hat sich geändert? Können Sie das APEAK-Logo noch sehen? Die Ebenen oben im Schnittfenster überdecken die darunter befindlichen Ebenen. Sie können das APEAK-Logo nicht sehen, weil es durch das Video Summer_Forest.mp4 überdeckt wird."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "setLayerIndex",
+                            "payload": {
+                                "layerName": "Summer_Forest.mp4",
+                                "index": "last"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}trim-logo-layer.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ändern der Dauer einer Ebene"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Die Ebenen wurden nach dem letzten Schritt wieder in die richtige Reihenfolge verschoben."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Die <$farbigen Balken$> auf der rechten Seite des Schnittfensters zeigen, wie lange eine Ebene in einer Komposition angezeigt wird. Sie können dies anpassen, indem Sie die Länge des entsprechenden farbigen Balkens ändern. Legen wir nun die gleiche Länge für alle Ebenen fest."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Bewegen Sie den Cursor bis an das Ende des farbigen Balkens der Ebene <$APEAK$>. Klicken auf den Balken und ziehen Sie ihn nach links, bis er die gleiche Länge wie der farbige Balken der Ebene <$Summer_Forest.mp4$> hat. (Halten Sie beim Ziehen die <%{KEY.SHIFT}%> gedrückt, um die Balken perfekt auszurichten.)",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerDuration",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "duration": [
+                                                    8,
+                                                    12
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Wiederholen Sie diesen Vorgang mit der Ebene <$Logo$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerDuration",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "duration": [
+                                                    8,
+                                                    12
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Sie haben das Ende der Ebenen „APEAK“ und „Logo“ an die Länge des Hintergrundvideos angepasst."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}shift-logo-layer.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Ändern des Zeitpunkts für das Einblenden einer Ebene"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Die Position, an der der farbige Balken einer Ebene beginnt, gibt an, wann die Ebene in der Komposition eingeblendet wird. Sie können den Zeitpunkt für das Einblenden einer Ebene ändern, indem Sie die Position ändern, an der der farbige Balken beginnt. Blenden wir die Ebene „APEAK“ etwas später als die beiden anderen Ebenen ein."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Bewegen Sie den Cursor an den Anfang des farbigen Balkens der Ebene „APEAK“, klicken Sie auf den Anfang des Balkens und ziehen Sie ihn bis etwa auf eine Sekunde in der Komposition. (Zur Referenz wird eine kleine blaue Marke an der Ein-Sekunden-Position angezeigt.)",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerStart",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "duration": [
+                                                    1,
+                                                    3
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Drücken Sie die <%{KEY.SPACEBAR}%>, um Ihre Arbeit von Anfang an abspielen zu lassen und eine Vorschau der Änderung zu erhalten.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Der Text „APEAK“ wird jetzt an der Ein-Sekunden-Marke in der Komposition eingeblendet, wenn das Logo und das Hintergrundvideo bereits sichtbar sind. Die Ebenen werden von links nach rechts in der Reihenfolge angezeigt, in der die farbigen Balken beginnen."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Gute Arbeit!",
+                            "successText": "Sie haben gerade gelernt, wie Sie Ihre Komposition mithilfe von Ebenen organisieren. Als Nächstes erfahren Sie, wie Sie die Ebenen und das Logo animieren."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,437 @@
+{
+    "aem_id": "after-effects/how-to/in-app-animate-layers",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "레이어에 애니메이션 적용",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea2",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Animate Layers.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "openProject",
+                            "payload": {
+                                "projectUrl": "{{pathProjectPayloads}}grouped_the-basics/Animate Layers.aet",
+                                "openOnlyIfNotAlreadyOpened": true
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-logo-to-bottom.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "애니메이션 적용을 위해 레이어 준비"
+                        },
+                        {
+                            "type": "text",
+                            "text": "After Effects는 사물이 흥미롭고 창의적인 방식으로 움직이도록 만드는 데 사용할 수 있는 소프트웨어입니다. 컴포지션이 시작될 때 로고가 화면에서 날아다니도록 만들어 보겠습니다. <$애니메이션$>을 사용하여 이 작업을 수행해 보겠습니다."
+                        },
+                        {
+                            "type": "text",
+                            "text": "이 애니메이션을 만들려면 먼저 로고가 움직이기 시작하는 시점과 위치를 설정해야 합니다. 로고가 화면 아래쪽에서 들어오도록 해보겠습니다."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "[현재 시간 표시기]를 타임라인의 시작 위치로 이동합니다(아직 해당 위치에 있지 않은 경우).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "{{definition:{TOOLTIP.TIMELINE_PANEL}|Timeline panel}}에서 <$로고$> 레이어를 선택하여 활성화합니다.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "{{definition:{TOOLTIP.COMPOSITION_PANEL}|Composition panel}}에서 실제 로고를 클릭하고 로고가 보이지 않을 때까지 화면 아래쪽으로 서서히 드래그합니다(<%{KEY.SHIFT}%>을(를) 누른 채 직선으로 이동).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "value": [
+                                                    false,
+                                                    [
+                                                        1000,
+                                                        1400
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "성공했습니다!",
+                                        "texts": [
+                                            "로고를 화면 아래쪽으로 이동했습니다. 이 위치가 애니메이션의 시작점이 됩니다."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}expand-properties.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "키프레임 설정"
+                        },
+                        {
+                            "type": "text",
+                            "text": "이제 레이어가 이 시간에 이 위치에서 움직이기 시작하도록 설정해야 합니다."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "레이어 이름 왼쪽의 화살표를 클릭하고 <$로고$> 레이어 속성을 확장하여 해당 <$변형$> 설정을 표시합니다."
+                                },
+                                {
+                                    "text": "<$변형$> 설정을 확장하고 <$위치$> 속성을 찾습니다."
+                                },
+                                {
+                                    "text": "[위치] 속성 왼쪽의 작은 초시계를 클릭합니다.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "count": [
+                                                    1,
+                                                    10
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "성공했습니다!",
+                                        "texts": [
+                                            "[타임라인] 패널의 [위치] 행에서 [현재 시간 표시기]가 있는 위치를 보십시오. 작은 파랑 다이아몬드가 보여야 합니다. 이 다이아몬드를 <$키프레임$>이라고 합니다. 키프레임을 추가하여 현재 시간(컴포지션이 시작되는 시간)의 로고 위치(화면 아래쪽에서)를 기억하도록 After Effects에 지정했습니다. After Effects에서는 이 모든 정보를 키프레임에 저장합니다."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}drag-logo-up.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "시간에 따라 레이어 변경"
+                        },
+                        {
+                            "type": "text",
+                            "text": "키프레임은 After Effects에서 애니메이션을 만드는 데 꼭 필요한 역할을 하므로 중요합니다. 로고를 다시 화면 가운데로 이동하고 다른 시간에 또 다른 키프레임을 설정하면 어떻게 되는지 보십시오."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "{{definition:{TOOLTIP.CURRENT_TIME_INDICATOR}|Current Time Indicator}}을(를) 컴포지션의 1초로 이동합니다(알아보기 쉽게 1초 표시에 파랑 표식이 있음).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": [
+                                                    0.6,
+                                                    2
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "[타임라인] 패널에서 <$로고$> 레이어를 선택하여 활성화합니다.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "[위치] 설정 바로 오른쪽에서 컴포지션에서의 로고 수평 및 수직 위치를 나타내는 두 개의 파랑 숫자를 찾습니다."
+                                },
+                                {
+                                    "text": "수직 위치(두 번째 숫자) 안쪽을 클릭하고 해당 값을 <$516$>으로 변경하여 로고를 [컴포지션] 패널의 가운데로 되돌립니다.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "count": [
+                                                    2,
+                                                    10
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "value": [
+                                                    false,
+                                                    [
+                                                        200,
+                                                        700
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "성공했습니다!",
+                                        "texts": [
+                                            "[타임라인] 패널의 [위치] 행에서 [현재 시간 표시기]가 있는 위치를 다시 보십시오. 이제 새 키프레임이 만들어져 있어야 합니다."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}play-back.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "애니메이션 미리 보기"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "[현재 시간 표시기]를 다시 시작 위치로 이동하고 <%{KEY.SPACEBAR}%>을(를) 눌러 After Effects가 설정된 키프레임을 사용하여 애니메이션을 만드는 방법을 봅니다.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "성공했습니다!",
+                                        "texts": [
+                                            "이제 로고가 [컴포지션] 패널의 아래쪽에서 날아 들어오고 1초 후에는 가운데에서 멈춰야 합니다. 축하합니다! 첫 번째 로고에 애니메이션을 적용했습니다."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "openProject",
+                            "payload": {
+                                "projectUrl": "{{pathProjectPayloads}}grouped_the-basics/Animate Layers 2.aet",
+                                "openOnlyIfNotAlreadyOpened": true
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "imageFullLarge",
+                            "imgUrl": "{{pathPanelPayloadsWithKey}}animation-practice.png"
+                        },
+                        {
+                            "type": "heading",
+                            "text": "애니메이션 연습"
+                        },
+                        {
+                            "type": "text",
+                            "text": "다음 섹션에서는 이전 단계에서 살펴본 예제에서처럼 간단한 애니메이션 작업을 수행하여 배운 내용을 복습합니다."
+                        },
+                        {
+                            "type": "text",
+                            "text": "계속해서 작업을 진행하려면 <$다음$>을 클릭합니다."
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}logo-title-fade-in.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "작업"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "위의 애니메이션 그래픽을 참조하여 시간에 따라 레이어 속성을 변경하여 APEAK라는 텍스트가 화면에 나타날 때 이 텍스트를 페이드하는 것에 대해 아는 지식을 활용해 보십시오. 도움이 필요하면 아래의 힌트를 사용하십시오.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "propertyName": "opacity",
+                                                "value": 0,
+                                                "keyframeIndex": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "propertyName": "opacity",
+                                                "value": 100,
+                                                "keyframeIndex": 1
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "힌트 1",
+                            "icon": "hint",
+                            "texts": [
+                                "로고의 [위치] 매개 변수를 변경했다면 페이드 애니메이션을 만들기 위해 [변형] 속성 중 어떠한 속성을 변경할 수 있는지 생각해 보십시오."
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "힌트 2",
+                            "icon": "hint",
+                            "texts": [
+                                "[불투명도]를 사용하여 페이드를 만들 수 있습니다. 하지만 [불투명도]가 변경되도록 하기 위해 After Effects에 지정해야 하는 두 가지 사항은 무엇일까요?"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "힌트 3",
+                            "icon": "hint",
+                            "texts": [
+                                "[불투명도]의 시작점과 끝점을 설정해야 합니다. 두 [불투명도] 값을 얼마로 설정해야 페이드 애니메이션이 만들어질까요?"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "힌트 4",
+                            "icon": "hint",
+                            "texts": [
+                                "[현재 시간 표시기]를 <$APEAK$> 레이어의 시작 위치로 이동하고 <$불투명도$> 매개 변수 옆의 <$초시계$>를 클릭하여 <$키프레임$>을 만들고 <$0$>으로 설정합니다. 그런 다음 [현재 시간 표시기]를 오른쪽을 향해 2초 표시로 이동하고 [불투명도]를 <$100$>으로 변경하여 자동으로 다른 키프레임을 설정합니다."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "잘하셨습니다!",
+                            "successText": "시간에 따라 해당 위치를 변경하여 레이어에 애니메이션을 적용하는 방법을 배웠습니다. 다음으로는 컴포지션에 시각적 효과를 추가하는 방법을 배우겠습니다."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

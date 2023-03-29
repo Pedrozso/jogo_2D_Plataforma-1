@@ -1,0 +1,176 @@
+{
+    "aem_id": "after-effects/how-to/in-app-create-a-composition",
+    "metadata": {
+        "descriptions": {
+            "medium": "Learn how to create an After Effects composition.",
+            "short": "Learn how to create an After Effects composition.",
+            "long": "Learn how to create an After Effects composition."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "컴포지션 만들기",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea0",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Create a Composition.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepPreferenceMods": [
+                        {
+                            "actionName": "setImportPath",
+                            "payload": {
+                                "newVal": "{{pathProjectPayloads}}playlist_the-basics/footage"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}new-comp-from-footage.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "푸티지에서 컴포지션 만들기"
+                        },
+                        {
+                            "type": "text",
+                            "text": "After Effects는 텍스트, 비디오, 사운드와 같은 다양한 오디오 및 시각적 요소를 조합하거나 합성한 다음 흥미롭고 창의적인 방식으로 움직이도록 함으로써 컴포지션을 만드는 데 사용할 수 있는 소프트웨어입니다."
+                        },
+                        {
+                            "type": "text",
+                            "text": "After Effects 프로젝트로 작업할 때 가장 먼저 수행할 작업은 사용할 미디어를 가져오고 컴포지션을 만드는 것입니다."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "<$컴포지션 패널$>에서 <$푸티지에서 새 컴포지션 만들기$>를 클릭합니다."
+                                },
+                                {
+                                    "text": "먼저 Adobe Illustrator 파일 APEAK_Logo.ai를 선택한 다음 <$다른 형식으로 가져오기$> 설정을 “푸티지”에서 “<$컴포지션$>”으로 변경하고 “{BUTTON.IMPORT_IN_DIALOG.{{osName}}}”을(를) 클릭합니다.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "projectItemAdded",
+                                            "payload": {
+                                                "itemType": "composition"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "성공했습니다!",
+                                        "texts": [
+                                            "{{definition:{TOOLTIP.PROJECT_PANEL}|Project panel}}을(를) 보십시오. 이제 방금 로고에서 만든 컴포지션과 원래 로고 파일이 있는 폴더 두 항목이 보여야 합니다."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "setItemSelected",
+                            "payload": {
+                                "itemName": "APEAK_Logo",
+                                "selected": false
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}opening-comp.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "컴포지션 열기"
+                        },
+                        {
+                            "type": "text",
+                            "text": "{{definition:{TOOLTIP.COMPOSITION}|composition}}을(를) 만들었으므로 이제 편집할 수 있도록 <$타임라인 패널$>에서 열어야 합니다."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "[프로젝트] 패널에서 <$APEAK_Logo$> 컴포지션을 두 번 클릭합니다.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isCompositionActive",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "성공했습니다!",
+                                        "texts": [
+                                            "{{definition:{TOOLTIP.COMPOSITION_PANEL}|Composition panel}}을(를) 보십시오. 이제 화면에 로고가 표시됩니다. {{definition:{TOOLTIP.TIMELINE_PANEL}|Timeline panel}}을(를) 보십시오. <$APEAK$>(로고 텍스트) 및 <$로고$>(로고 자체) 파일이 [타임라인] 패널에 추가되었습니다. 이 두 파일은 [컴포지션] 패널에서 보는 로고 텍스트 및 로고에 해당합니다."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "잘하셨습니다!",
+                            "successText": "기존 미디어 파일을 사용하여 컴포지션을 만드는 방법을 배웠습니다. 다음으로는 컴포지션을 구성하는 방법을 배우겠습니다."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

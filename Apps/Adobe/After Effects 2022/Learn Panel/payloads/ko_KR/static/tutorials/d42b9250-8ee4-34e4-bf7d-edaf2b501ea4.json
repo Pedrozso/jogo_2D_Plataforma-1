@@ -1,0 +1,174 @@
+{
+    "aem_id": "after-effects/how-to/in-app-export-your-video",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "컴포지션 내보내기",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "120",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea4",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Export Your Video.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-to-renderqueue.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "렌더링"
+                        },
+                        {
+                            "type": "text",
+                            "text": "애니메이션 로고를 만드는 마지막 단계는 컴포지션을 <$렌더링$>하는 것입니다. 프로젝트 컨텐츠를 렌더링할 때 컴포지션에 대한 모든 정보(레이어 순서, 효과 설정 등)를 가져오고 컴포지션을 처리하여 볼 수 있는 동영상 파일로 만들도록 After Effects에 지정합니다."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "애플리케이션 메뉴 모음에서 <$컴포지션 > 렌더링 대기열에 추가$>를 클릭합니다.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "doesRenderQueueItemExist",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "성공했습니다!",
+                                        "texts": [
+                                            "아직은 컴포지션이 완전히 렌더링되지 않았습니다. 마치기 전에 오른쪽의 <$렌더링 대기열 패널$>에서 컴포지션의 내보내기 설정을 확인해야 합니다."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}set-render-settings.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "렌더링 설정"
+                        },
+                        {
+                            "type": "text",
+                            "text": "지금은 가장 기본적인 렌더링 설정을 사용해 보겠습니다."
+                        },
+                        {
+                            "type": "text",
+                            "text": "<$렌더링 대기열 패널$>에서 <$APEAK_Logo$> 컴포지션을 찾습니다."
+                        },
+                        {
+                            "type": "text",
+                            "text": "APEAK 컴포지션 아래에서 <$렌더링 설정$>이 <$최고 설정$>으로 설정되어 있고 <$출력 모듈$>이 <$손실 없음$>으로 설정되어 있는지 확인합니다."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "[렌더링 대기열] 가운데의 “출력 위치” 옵션 옆에 있는 파랑 파일 이름을 클릭하여 하드 드라이브의 위치에 저장합니다.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkOutputModuleSettings",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo",
+                                                "nonEmptyField": "Output File Info.Full Flat Path"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "[렌더링 대기열] 패널의 맨 오른쪽에서 <$렌더링$>을 클릭합니다.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkRenderQueueStatus",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo",
+                                                "status": "startedRender"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "성공했습니다!",
+                                        "texts": [
+                                            "컴포지션을 렌더링하는 중입니다! 대기열 위쪽의 파랑 진행률 표시줄을 보고 진행 상황을 추적할 수 있습니다."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "잘하셨습니다!",
+                            "successText": "첫 번째 애니메이션 로고를 성공적으로 만들었습니다. 이것으로 “기본 사항 배우기” 튜토리얼 시리즈가 끝났습니다.",
+                            "additionalInfo": "이 항목에 대해 더 자세히 살펴보려면 adobe.com에서 전체 <a href=\"https://helpx.adobe.com/kr/after-effects/tutorials.html\">After Effects 시작</a> 시리즈를 시청하십시오."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,176 @@
+{
+    "aem_id": "after-effects/how-to/in-app-create-a-composition",
+    "metadata": {
+        "descriptions": {
+            "medium": "Learn how to create an After Effects composition.",
+            "short": "Learn how to create an After Effects composition.",
+            "long": "Learn how to create an After Effects composition."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Erstellen von Kompositionen",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea0",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Create a Composition.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepPreferenceMods": [
+                        {
+                            "actionName": "setImportPath",
+                            "payload": {
+                                "newVal": "{{pathProjectPayloads}}playlist_the-basics/footage"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}new-comp-from-footage.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Erstellen einer Komposition aus Footage"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Bei After Effects geht es darum, Kompositionen zu erstellen, indem Sie unterschiedliche Audio- und visuelle Elemente wie Text, Video und Sound kombinieren und dann auf vielseitige, kreative Art bewegen."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Der erste Schritt in jedem After Effects-Projekt besteht darin, die Medien, mit denen Sie arbeiten möchten, zu importieren und eine Komposition zu erstellen."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Klicken Sie im <$Kompositionsfenster$> auf <$Neue Komposition aus Footage$>."
+                                },
+                                {
+                                    "text": "Wählen Sie zuerst die Adobe Illustrator-Datei APEAK_Logo.ai, ändern Sie dann die Einstellung <$Importieren als$> von „Footage“ in „<$Komposition$>“ und klicken Sie auf „{BUTTON.IMPORT_IN_DIALOG.{{osName}}}“.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "projectItemAdded",
+                                            "payload": {
+                                                "itemType": "composition"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Betrachten Sie das {{definition:{TOOLTIP.PROJECT_PANEL}|Projektfenster}}. Es sollte jetzt zwei Dinge enthalten: die Komposition, die Sie gerade aus dem Logo erstellt haben, und einen Ordner mit den Originaldateien des Logos."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "setItemSelected",
+                            "payload": {
+                                "itemName": "APEAK_Logo",
+                                "selected": false
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}opening-comp.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Öffnen der Komposition"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Nachdem Sie die {{definition:{TOOLTIP.COMPOSITION}|Komposition}} erstellt haben, müssen Sie sie zum Bearbeiten im <$Schnittfenster$> öffnen."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Doppelklicken Sie auf die Komposition <$APEAK_Logo$> im Projektfenster.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isCompositionActive",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Betrachten Sie das {{definition:{TOOLTIP.COMPOSITION_PANEL}|Kompositionsfenster}}. Das Logo wird jetzt auf dem Bildschirm angezeigt. Betrachten Sie dann das {{definition:{TOOLTIP.TIMELINE_PANEL}|Schnittfenster}}. Die Dateien <$APEAK$> (Text des Logos) und <$Logo$> (das Logo selbst) wurden im Schnittfenster hinzugefügt und entsprechen dem Inhalt des Kompositionsfensters."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Gute Arbeit!",
+                            "successText": "Sie haben gerade gelernt, wie Sie aus vorhandenen Mediendateien eine Komposition erstellen. Als Nächstes erfahren Sie, wie Sie Ihre Komposition organisieren."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

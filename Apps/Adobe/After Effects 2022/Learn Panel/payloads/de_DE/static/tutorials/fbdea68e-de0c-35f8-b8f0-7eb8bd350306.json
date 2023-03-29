@@ -1,0 +1,44 @@
+{
+    "id": "b6c91a04-d485-4608-8316-ec1f5f7667ed",
+    "aem_id": "playlist/after-effects/video/playlist_the-basics",
+    "playlistUUID": "fbdea68e-de0c-35f8-b8f0-7eb8bd350306",
+    "status": "live",
+    "title": "Grundlagen",
+    "tutorial_ids": [
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501ea0",
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501ea1",
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501ea2",
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501ea3",
+        "d42b9250-8ee4-34e4-bf7d-edaf2b501ea4"
+    ],
+    "created_on": "Mon Dec 17 22:21:52 UTC 2018",
+    "modified_on": "Mon Dec 17 22:21:52 UTC 2018",
+    "published_on": "Thu Dec 13 13:13:32 UTC 2018",
+    "description": "Fünf interaktive Tutorials, in denen Sie die Grundlagen der Erstellung eines animierten Logos in After Effects lernen können. Jedes Tutorial deckt einen wichtigen Schritt des grundlegenden After Effects-Workflows ab.",
+    "type": "the-basics",
+    "header": "In dieser Tutorialreihe erstellen wir ein animiertes Logo.<br><br>Die Tutorials sind interaktiv. Machen Sie also mit, um den maximalen Lerneffekt zu erzielen. Jedes Tutorial öffnet ein neues Projekt, in dem die Schritte aus dem vorhergehenden Tutorial bereits für Sie abgeschlossen sind, sodass Sie Ihre Arbeiten nicht speichern müssen.",
+    "level": "beginner",
+    "stage": "begin",
+    "applications": {
+        "sap_code": [
+            "AEFT"
+        ],
+        "fi_code": [
+            "aftereffects_cc"
+        ]
+    },
+    "platforms": [
+        "in-app"
+    ],
+    "creative_fields": [
+        "video"
+    ],
+    "topics": [
+        "creative-cloud-for-video"
+    ],
+    "images": {
+        "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg",
+        "hero": "{{pathPanelPayloadsWithKey}}banner.jpg"
+    },
+    "total_duration": 1200
+}

@@ -1,0 +1,174 @@
+{
+    "aem_id": "after-effects/how-to/in-app-export-your-video",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "コンポジションの書き出し",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "120",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea4",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Export Your Video.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-to-renderqueue.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "レンダリング"
+                        },
+                        {
+                            "type": "text",
+                            "text": "アニメーションロゴを作成するための最後の手順は、コンポジションの<$レンダリング$>です。プロジェクトコンテンツをレンダリングする場合は、After Effects 上でコンポジションに関するすべての情報 (レイヤーの順序、エフェクト設定など) を処理して、表示可能なムービーファイルを作成します。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "アプリケーションメニューバーで、「<$コンポジション／レンダーキューに追加$>」をクリックします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "doesRenderQueueItemExist",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "コンポジションのレンダリングはまだ完了していません。終了する前に、右側の<$レンダーキューパネル$>の書き出し設定を確認する必要があります。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}set-render-settings.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "レンダリング設定"
+                        },
+                        {
+                            "type": "text",
+                            "text": "ここでは、最も基本的なレンダリング設定を使用します。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "<$レンダーキューパネル$>で、<$APEAK_Logo$> コンポジションを見つけます。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "APEAK コンポジションで、<$レンダリング設定$>が<$最良設定$>に設定され、<$出力モジュール$>が<$劣化なし$>に設定されていることを確認します。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "レンダーキュー中央の「出力先」オプションの横にある青色のファイル名をクリックして、ハードドライブ上の場所に保存します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkOutputModuleSettings",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo",
+                                                "nonEmptyField": "Output File Info.Full Flat Path"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "レンダーキューパネルの右端にある「<$レンダリング$>」をクリックします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkRenderQueueStatus",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo",
+                                                "status": "startedRender"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "コンポジションはレンダリング中です。キューの上部にある青色のプログレスバーで、進行状況を追跡できます。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "よくできました！",
+                            "successText": "最初のアニメーションロゴが正常に作成されました。これで、「基礎の学習」チュートリアルシリーズを終了します。",
+                            "additionalInfo": "このトピックおよびその他の詳細については、adobe.com の<a href=\"https://helpx.adobe.com/jp/after-effects/tutorials.html\">After Effects を始める</a>シリーズを参照してください。"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

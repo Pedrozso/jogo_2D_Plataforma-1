@@ -1,0 +1,455 @@
+{
+    "aem_id": "after-effects/how-to/in-app-add-an-effect",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Add a Visual Effect",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "360",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea3",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Add an Effect.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-blur-from-nav.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Adding a Blur Effect"
+                        },
+                        {
+                            "type": "text",
+                            "text": "In the last tutorial, we added animation to our logo by changing its position over time. In this tutorial you’ll add a visual effect to the background video."
+                        },
+                        {
+                            "type": "text",
+                            "text": "The kinds of effects you could add to this video are endless, so let’s just add a simple blur effect."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "In the Timeline panel, select the Summer_Forest.mp4 layer.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "In the application menu at the top of the screen, choose <$Effect > Blur & Sharpen > Fast Box Blur$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "hasEffect",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Your video isn’t blurry yet, but that’s normal. You’ll adjust the setting in the next step. The effect has been added to the Summer_Forest.mp4 layer, and the Effect Controls panel also opened up as a tab next to the Project panel."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}change-blur-radius.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Adjusting Effect Settings"
+                        },
+                        {
+                            "type": "text",
+                            "text": "You can adjust the settings of any effect you add from the Effect Controls panel or the Timeline panel. For this example, you’ll mainly work in the Timeline panel."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Let’s adjust the effect settings to create the blur effect."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Expand the <$Summer_Forest.mp4$> layer by clicking on the arrow to the left of the layer name to reveal the Effects, Transform, and Audio settings."
+                                },
+                                {
+                                    "text": "Expand the <$Effects$> option of the Summer_Forest.mp4 layer and then expand the <$Fast Box Blur$> effect."
+                                },
+                                {
+                                    "text": "In the <$Fast Box Blur$> effect settings, find the <$Blur Radius$> property and set it to <$25$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "value": [
+                                                    20,
+                                                    30
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "By changing the blur radius from 0 to 25, you blurred the background video."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}set-first-keyframe.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Adding Keyframes to Animate Effects"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Let’s gradually apply the blur effect to the Summer_Forest video so that the video becomes blurry when the logo appears on screen."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Make sure the Current Time Indicator is at the one-second mark (where the logo stops moving at the center of the screen).",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": [
+                                                    0.6,
+                                                    3
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Under the <$Fast Box Blur$> setting, find the <$Blur Radius$> setting and click the stopwatch to the left.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "count": [
+                                                    1,
+                                                    10
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Look in the Timeline panel at the Blur Radius setting row where the Current Time Indicator is. You should see a little blue diamond. If you’ve completed the previous animation tutorial, you’ll know this diamond is called a <$keyframe$>. By adding a keyframe, you just told After Effects that you want it to remember the blur radius value (25) at that current time (when the logo stops moving). After Effects stores all that information in the keyframe."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-cti-and-change-blur.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Changing Effects Over Time"
+                        },
+                        {
+                            "type": "text",
+                            "text": "In the previous step, you set the value when the effect stops changing. Now you must set the value when it starts changing."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Move the Current Time Indicator to the beginning of the composition.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Under the Fast Box Blur effect, change the <$Blur Radius$> to 0.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "keyframeIndex": 0,
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Look again in the Timeline panel at the Blur Radius row where the Current Time Indicator is. You should see that a new keyframe has been added."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}play-result.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Previewing the Effect"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Press the <%{KEY.SPACEBAR}%> to see how After Effects applies the visual effect over time using the keyframes you set.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "You saw the background video become gradually more blurry as the logo flew in from the bottom of the screen."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-mirror-effect.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Adding Multiple Effects"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Let’s add one final effect to our background video to make our composition even more visually interesting."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "In the Timeline panel, select the Summer_Forest.mp4 layer to make it your active layer.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "In the application menu at the top of the screen, choose <$Effect > Distort > Mirror$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "hasEffect",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Mirror"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "You can’t see the Mirror effect yet, but that’s normal. You’ll adjust the setting in the next step. The effect has been added to the Summer_Forest.mp4 layer, and the settings for the effect were also added to the Effect Controls panel."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}adjust-mirror-effect.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Changing Settings in the Effect Controls Panel"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Let’s change the Mirror effect on the background video over time."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "In the Effect Controls panel, find the <$Reflection Center$> setting under the <$Mirror$> effect."
+                                },
+                                {
+                                    "text": "To the right of Reflection Center, click on the box with a target icon inside and then click directly in the center of the logo in the Composition panel.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Mirror",
+                                                "propertyName": "ADBE Mirror-0001",
+                                                "value": [
+                                                    [
+                                                        700,
+                                                        1200
+                                                    ],
+                                                    [
+                                                        350,
+                                                        800
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Play the composition to see the effect applied to the background video.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "The Mirror effect has now been applied at the center of the Composition panel."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Great Job!",
+                            "successText": "You just learned how to add and adjust visual effects in your composition. Next, you’ll learn how to export your project as a video."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

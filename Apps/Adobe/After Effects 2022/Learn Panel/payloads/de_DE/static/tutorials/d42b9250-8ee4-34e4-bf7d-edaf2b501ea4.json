@@ -1,0 +1,174 @@
+{
+    "aem_id": "after-effects/how-to/in-app-export-your-video",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Exportieren der Komposition",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "120",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea4",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Export Your Video.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-to-renderqueue.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Rendern"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Der letzte Schritt bei der Erstellung des animierten Logos besteht darin, die Komposition zu <$rendern$>. Wenn Sie Projektinhalte rendern, weisen Sie After Effects an, alle Informationen Ihrer Komposition (Ebenenreihenfolge, Effekteinstellungen usw.) zu einer abspielbaren Filmdatei zu verarbeiten."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Klicken Sie in der Applikationsmenüleiste auf <$Komposition > An die Renderliste anfügen$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "doesRenderQueueItemExist",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Sie sind noch nicht ganz fertig. Bevor Ihre Komposition gerendert werden kann, müssen Sie noch die Exporteinstellungen im <$Renderlistenfenster$> auf der rechten Seite überprüfen."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}set-render-settings.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Rendereinstellungen"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Wir verwenden die einfachsten Rendereinstellungen."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Suchen Sie im <$Renderlistenfenster$> die Komposition <$APEAK_Logo$>."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Stellen Sie sicher, dass in der APEAK-Komposition für <$Rendereinstellungen$> die Option <$Optimale Einstellungen$> und für <$Ausgabemodul$> die Option <$Verlustfrei$> eingestellt ist."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Klicken Sie neben „Ausgabe in“ in der Mitte der Renderliste auf den blauen Dateinamen, um die Datei an einem Speicherort auf Ihrer Festplatte zu speichern.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkOutputModuleSettings",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo",
+                                                "nonEmptyField": "Output File Info.Full Flat Path"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Klicken Sie ganz rechts im Renderlistenfenster auf <$Rendern$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkRenderQueueStatus",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo",
+                                                "status": "startedRender"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Erfolgreich!",
+                                        "texts": [
+                                            "Ihre Komposition wird gerendert. Sie können den Fortschritt in der blauen Statusanzeige über der Warteschlange verfolgen."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Gute Arbeit!",
+                            "successText": "Sie haben Ihr erstes animiertes Logo erfolgreich erstellt. Damit ist die Tutorialreihe „Grundlagen“ abgeschlossen.",
+                            "additionalInfo": "Um einen genauen Überblick über dieses und andere Themen zu erhalten, sehen Sie sich die vollständige Tutorialreihe <a href=\"https://helpx.adobe.com/de/after-effects/tutorials.html\">Erste Schritte mit After Effects</a> auf adobe.com an."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,455 @@
+{
+    "aem_id": "after-effects/how-to/in-app-add-an-effect",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "ビジュアルエフェクトの追加",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "360",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea3",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Add an Effect.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-blur-from-nav.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "ブラーエフェクトの追加"
+                        },
+                        {
+                            "type": "text",
+                            "text": "前回のチュートリアルでは、時間の経過に応じて位置を変更させることにより、ロゴにアニメーションを追加しました。このチュートリアルでは、背景ビデオにビジュアルエフェクトを追加します。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "このビデオに追加できるエフェクトの種類は無数にありますが、ここでは単純なブラーエフェクトを追加します。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "タイムラインパネルで、Summer_Forest.mp4 レイヤーを選択します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "画面上部のアプリケーションメニューで、「<$エフェクト／ブラー＆シャープ／高速ボックスブラー$>」をクリックします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "hasEffect",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "ビデオはまだぼやけていませんが、異常ありません。次の手順でこの設定を調整します。ブラーエフェクトが Summer_Forest.mp4 レイヤーに追加され、プロジェクトパネルの横のタブにエフェクトコントロールパネルも開きました。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}change-blur-radius.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "エフェクト設定の調整"
+                        },
+                        {
+                            "type": "text",
+                            "text": "エフェクトコントロールパネルまたはタイムラインパネルから追加するエフェクトの設定を調整できます。この例では、主にタイムラインパネルで作業します。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "エフェクト設定を調整してブラーエフェクトを作成します。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "レイヤー名の左にある矢印をクリックして <$Summer_Forest.mp4$> レイヤーの設定を展開し、エフェクト、変形およびオーディオの設定を表示します。"
+                                },
+                                {
+                                    "text": "Summer_Forest.mp4 レイヤーの「<$エフェクト$>」オプションを展開し、<$高速ボックスブラー$>エフェクトを展開します。"
+                                },
+                                {
+                                    "text": "<$高速ボックスブラー$>エフェクト設定で、<$ブラーの半径$>プロパティを <$25$> に設定します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "value": [
+                                                    20,
+                                                    30
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "ブラー半径を 0 から 25 に変更して、背景ビデオにブラーエフェクトを適用しました。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}set-first-keyframe.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "アニメーションエフェクトへのキーフレームの追加"
+                        },
+                        {
+                            "type": "text",
+                            "text": "ブラーエフェクトを Summer_Forest ビデオに徐々に適用して、ロゴが画面上に表示されるときにビデオがぼやけるようにします。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "現在の時間インジケーターが 1 秒のマーク (ロゴが画面の中央で停止する位置) にあることを確認します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": [
+                                                    0.6,
+                                                    3
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "<$高速ボックスブラー$>設定の中にある<$ブラーの半径$>設定で、左のストップウォッチをクリックします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "count": [
+                                                    1,
+                                                    10
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "タイムラインパネル上で、現在の時間インジケーターがあるブラーの半径の設定行を確認します。小さな青い菱形が表示されています。前回のアニメーションチュートリアルでは、この菱形を<$キーフレーム$>と呼ぶと説明しました。キーフレームの追加により、現在の時間 (ロゴが移動を停止する時間) に応じたブラーの半径の値 (25) を設定できました。After Effects はその情報すべてをキーフレームに保存します。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-cti-and-change-blur.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "時間の経過に応じたエフェクトの変更"
+                        },
+                        {
+                            "type": "text",
+                            "text": "ブラーの半径と位置の終了値を設定したら、次にブラーの半径と位置の開始値を設定する必要があります。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "現在の時間インジケーターをコンポジションの先頭に移動します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "高速ボックスブラーエフェクトで、<$ブラーの半径$>を 0 に変更します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Box Blur2",
+                                                "propertyName": "ADBE Box Blur2-0001",
+                                                "keyframeIndex": 0,
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "タイムラインパネル上で、現在の時間インジケーターがあるブラーの半径の行を再度確認します。新しいキーフレームが作成されたはずです。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}play-result.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "エフェクトのプレビュー"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "<%{KEY.SPACEBAR}%> キーを押すと、After Effects が設定したキーフレームを使用し、時間の経過に応じてビジュアルエフェクトをどのように適用したかを確認できます。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "画面の下部からロゴが現れると、背景ビデオは徐々にぼやけるようになります。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}add-mirror-effect.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "複数エフェクトの追加"
+                        },
+                        {
+                            "type": "text",
+                            "text": "背景ビデオにエフェクトをもう 1 つ追加して、コンポジションをさらに視覚的に面白いものにします。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "タイムラインパネルで Summer_Forest.mp4 レイヤーを選択して、アクティブなレイヤーにします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "画面上部のアプリケーションメニューで、「<$エフェクト／ディストーション／ミラー$>」をクリックします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "hasEffect",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Mirror"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "まだミラーエフェクトが反映されていませんが、異常ありません。次の手順でこの設定を調整します。ミラーエフェクトが Summer_Forest.mp4 レイヤーに追加され、その設定がエフェクトコントロールパネルにも追加されました。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}adjust-mirror-effect.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "エフェクトコントロールパネルでの設定の変更"
+                        },
+                        {
+                            "type": "text",
+                            "text": "ミラーエフェクトを背景ビデオに適用します。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "エフェクトコントロールパネルで、<$ミラーエフェクト$>設定の下に<$反射の中心$>設定があります。"
+                                },
+                                {
+                                    "text": "反射の中心の右側でターゲットアイコンのある四角形のボックスをクリックし、次にコンポジションパネルでロゴの中央を直接クリックします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkEffectProperty",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "effectName": "ADBE Mirror",
+                                                "propertyName": "ADBE Mirror-0001",
+                                                "value": [
+                                                    [
+                                                        700,
+                                                        1200
+                                                    ],
+                                                    [
+                                                        350,
+                                                        800
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "コンポジションを再生して、背景ビデオに適用されたエフェクトを確認します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "ミラーエフェクトは、コンポジションパネルの中央に適用されました。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "よくできました！",
+                            "successText": "エフェクトパネルを使用してコンポジションにビジュアルエフェクトを追加および調整する方法を学習しました。次に、プロジェクトをビデオファイルに書き出す方法を学習します。"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

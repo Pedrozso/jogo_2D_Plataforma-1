@@ -1,0 +1,176 @@
+{
+    "aem_id": "after-effects/how-to/in-app-create-a-composition",
+    "metadata": {
+        "descriptions": {
+            "medium": "Learn how to create an After Effects composition.",
+            "short": "Learn how to create an After Effects composition.",
+            "long": "Learn how to create an After Effects composition."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "Create a Composition",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea0",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Create a Composition.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepPreferenceMods": [
+                        {
+                            "actionName": "setImportPath",
+                            "payload": {
+                                "newVal": "{{pathProjectPayloads}}playlist_the-basics/footage"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}new-comp-from-footage.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Creating a Composition from Footage"
+                        },
+                        {
+                            "type": "text",
+                            "text": "After Effects is all about creating compositions - combining, or compositing, different audio and visual elements like text, video, and sounds, and then making them move in fun and creative ways."
+                        },
+                        {
+                            "type": "text",
+                            "text": "The first step of any After Effects project is to import the media you’ll be working with and create a composition."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "In the <$Composition panel$>, click on <$New Composition From Footage$>."
+                                },
+                                {
+                                    "text": "First select the Adobe Illustrator file APEAK_Logo.ai. Then change the <$Import as$> setting from “Footage” to “<$Composition$>” and click <${BUTTON.IMPORT_IN_DIALOG.{{osName}}}$>.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "projectItemAdded",
+                                            "payload": {
+                                                "itemType": "composition"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Look over in the {{definition:{TOOLTIP.PROJECT_PANEL}|Project panel}}. You should now see two items: the composition you just created from the logo and a folder with the original logo files."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "setItemSelected",
+                            "payload": {
+                                "itemName": "APEAK_Logo",
+                                "selected": false
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}opening-comp.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Opening the Composition"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Now that you’ve created the {{definition:{TOOLTIP.COMPOSITION}|composition}}, you will need to open it in the <$Timeline panel$> so that you can edit it."
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "Double-click on the <$APEAK_Logo$> composition in the Project panel.",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isCompositionActive",
+                                            "payload": {
+                                                "compositionName": "APEAK_Logo"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "Success!",
+                                        "texts": [
+                                            "Look over in the {{definition:{TOOLTIP.COMPOSITION_PANEL}|Composition panel}}. The logo is now displayed on screen. Now look at the {{definition:{TOOLTIP.TIMELINE_PANEL}|Timeline panel}}. The files <$APEAK$> (the logo text) and <$Logo$> (the logo itself) were added to the Timeline panel and correspond to what you see in the Composition panel."
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "Great Job!",
+                            "successText": "You just learned how to create a composition using existing media files. Next, you’ll learn how to organize your composition."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,437 @@
+{
+    "aem_id": "after-effects/how-to/in-app-animate-layers",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "レイヤーのアニメーション化",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea2",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Animate Layers.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "openProject",
+                            "payload": {
+                                "projectUrl": "{{pathProjectPayloads}}grouped_the-basics/Animate Layers.aet",
+                                "openOnlyIfNotAlreadyOpened": true
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-logo-to-bottom.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "アニメーション用のレイヤーの準備"
+                        },
+                        {
+                            "type": "text",
+                            "text": "After Effects は、画像を楽しくクリエイティブな方法で動かすためのあらゆる機能を備えています。例えば、コンポジションの開始時にロゴが画面に飛び出すように設定できます。これは、<$アニメーション$>を使用して実行できます。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "このアニメーションを作成するには、まず After Effects でロゴが移動を開始するタイミングと場所を設定する必要があります。例えば、画面の下部から現れるようにします。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "現在の時間インジケーターをタイムラインの先頭に移動します (まだそこにない場合)。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "{{definition:{TOOLTIP.TIMELINE_PANEL}|タイムラインパネル}}で、<$ロゴ$>レイヤーを選択してアクティブなレイヤーにします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "{{definition:{TOOLTIP.COMPOSITION_PANEL}|コンポジションパネル}}で、実際のロゴ自体をクリックし、視界から消えるまで画面の下部にドラッグします (ロゴをドラックして直線上を移動する間は <%{KEY.SHIFT}%> キーを押したままにします)。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "value": [
+                                                    false,
+                                                    [
+                                                        1000,
+                                                        1400
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "ロゴを画面の下部に移動しました。この位置はアニメーションの開始点になります。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}expand-properties.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "キーフレームの設定"
+                        },
+                        {
+                            "type": "text",
+                            "text": "このタイミングと位置からレイヤーの移動を開始するように After Effects を設定する必要があります。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "レイヤー名の左にある矢印をクリックして<$ロゴ$>レイヤーのプロパティを展開し、<$変形$>設定を表示します。"
+                                },
+                                {
+                                    "text": "<$変形$>設定を展開すると、<$位置$>プロパティがあります。"
+                                },
+                                {
+                                    "text": "位置プロパティの左にある小さなストップウォッチをクリックします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "count": [
+                                                    1,
+                                                    10
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "現在の時間インジケーターがあるタイムラインパネルの位置行を確認します。小さな青い菱形が表示されています。この菱形は、<$キーフレーム$>と呼ばれます。キーフレームの追加により、現在の時間 (コンポジションの先頭) に応じたロゴの位置 (画面の下部の外側) を設定できました。After Effects はその情報すべてをキーフレームに保存します。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}drag-logo-up.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "時間の経過に応じたレイヤーの変更"
+                        },
+                        {
+                            "type": "text",
+                            "text": "キーフレームは、After Effects でアニメーションを作成するのに不可欠な役割を果たしているので重要です。ロゴを画面の中央に戻し、別のキーフレームを異なる時間に設定するとどうなるか見てください。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "{{definition:{TOOLTIP.CURRENT_TIME_INDICATOR}|現在の時間インジケーター}}をコンポジションの 1 秒に移動します (参照用に青色のマーカーが 1 秒のマークに配置されました)。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": [
+                                                    0.6,
+                                                    2
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "タイムラインパネルで<$ロゴ$>レイヤーを選択して、アクティブなレイヤーにします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerSelected",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "singleLayerOnly": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "位置設定のすぐ右側に、コンポジション内のロゴの水平および垂直位置を表す青色の数字が 2 つあります。"
+                                },
+                                {
+                                    "text": "垂直位置 (2 番目の数) 内をクリックし、値を <$516$> に変更して、コンポジションパネルの中央にロゴを戻します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkKeyframeCount",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "count": [
+                                                    2,
+                                                    10
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "propertyName": "position",
+                                                "value": [
+                                                    false,
+                                                    [
+                                                        200,
+                                                        700
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "現在の時間インジケーターがあるタイムラインパネルの位置行を再度確認します。新しいキーフレームが作成されているはずです。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}play-back.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "アニメーションのプレビュー"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "現在の時間インジケーターを先頭に戻し、<%{KEY.SPACEBAR}%> キーを押して、After Effects が設定したキーフレームを使用してアニメーションをどのように作成したか確認します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "ロゴがコンポジションパネルの下部から現れて、1 秒後に中央で停止するはずです。おめでとうございます。最初のロゴをアニメーション化できました。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "openProject",
+                            "payload": {
+                                "projectUrl": "{{pathProjectPayloads}}grouped_the-basics/Animate Layers 2.aet",
+                                "openOnlyIfNotAlreadyOpened": true
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "imageFullLarge",
+                            "imgUrl": "{{pathPanelPayloadsWithKey}}animation-practice.png"
+                        },
+                        {
+                            "type": "heading",
+                            "text": "アニメーションの練習"
+                        },
+                        {
+                            "type": "text",
+                            "text": "次のセクションでは、前の手順で見た例と似た短いアニメーション課題に挑戦し、学習効果を強化することができます。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "<$次へ$>をクリックして、課題を続行します。"
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}logo-title-fade-in.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "課題"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "上のアニメーショングラフィックを参照しながら、レイヤーのプロパティを時間の経過に応じて変化させるための知識を活用して、画面表示時に APEAK テキストをフェードインさせます。下にあるヒントを参考にしてください。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "propertyName": "opacity",
+                                                "value": 0,
+                                                "keyframeIndex": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "checkLayerProperty",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "propertyName": "opacity",
+                                                "value": 100,
+                                                "keyframeIndex": 1
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "ヒント 1",
+                            "icon": "hint",
+                            "texts": [
+                                "位置パラメーターを変更したロゴについて、どの変形プロパティを変更してフェードアニメーションを作成するかを考えます。"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "ヒント 2",
+                            "icon": "hint",
+                            "texts": [
+                                "不透明度を使用してフェードを作成することができますが、不透明度をどのように変化させるかについて、After Effects で 2 つの設定が必要です。"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "ヒント 3",
+                            "icon": "hint",
+                            "texts": [
+                                "不透明度の開始点と終了点を設定する必要があります。アニメーションを作成するには、不透明度の値を 2 つ指定する必要があります。"
+                            ]
+                        },
+                        {
+                            "type": "toggleable",
+                            "heading": "ヒント 4",
+                            "icon": "hint",
+                            "texts": [
+                                "現在の時間インジケーターを <$APEAK$> レイヤーの先頭に移動し、<$不透明度$>パラメーターの横にある<$ストップウォッチ$>をクリックして<$キーフレーム$>を作成し、<$0$> に設定します。次に、現在の時間インジケーターを 2 秒のマークの右に移動して、不透明度を <$100$> に変更し、別のキーフレームを自動的に設定します。"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "よくできました！",
+                            "successText": "時間の経過に応じてレイヤーの位置を変更してアニメーション化する方法を学習しました。次に、ビジュアルエフェクトをコンポジションに追加する方法を学習します。"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

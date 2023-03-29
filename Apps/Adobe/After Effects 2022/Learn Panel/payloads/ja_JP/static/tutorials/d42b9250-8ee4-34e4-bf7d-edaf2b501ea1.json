@@ -1,0 +1,316 @@
+{
+    "aem_id": "after-effects/how-to/in-app-organize-the-composition",
+    "metadata": {
+        "descriptions": {
+            "medium": "Make elements of your composition move in fun and creative ways.",
+            "short": "Make elements of your composition move in fun and creative ways.",
+            "long": "Make elements of your composition move in fun and creative ways."
+        },
+        "media_types": [
+            "project"
+        ],
+        "published_on": "2018-12-17T21:49:40.481Z",
+        "creative_fields": [
+            "video"
+        ],
+        "application": {
+            "fi_code": "aftereffects_cc",
+            "sap_code": "AEFT"
+        },
+        "locale": "en_US",
+        "images": {
+            "thumbnail": "{{pathPanelPayloadsWithKey}}teaser.jpg"
+        },
+        "title": "コンポジションの整理",
+        "platforms": [
+            "in-app"
+        ],
+        "duration_in_seconds": "240",
+        "learning_approach": "interactive-in-app",
+        "related_applications": {
+            "fi_code": [],
+            "sap_code": []
+        },
+        "level": "beginner",
+        "stage": "begin",
+        "topics": [
+            "animation-video"
+        ]
+    },
+    "urls": {
+        "helpx": "",
+        "helpx_iframe": ""
+    },
+    "created_on": "2018-12-17T21:51:50.503Z",
+    "modified_on": "2018-12-17T21:51:50.503Z",
+    "locale": "en_US",
+    "published_status": "live",
+    "tutorialUUID": "d42b9250-8ee4-34e4-bf7d-edaf2b501ea1",
+    "service_uuid": "a3d90039-c0e7-3845-94d8-62d4934db60d",
+    "version": 1,
+    "surfaces": {
+        "in_app_panel": {
+            "format": "dva",
+            "version": "0.1",
+            "projectUrl": "{{pathProjectPayloads}}playlist_the-basics/Organize the Composition.aet",
+            "sizeBytes": "123456789",
+            "minVersion": "16.0",
+            "additionalAssets": [],
+            "steps": [
+                {
+                    "stepPreferenceMods": [
+                        {
+                            "actionName": "setImportPath",
+                            "payload": {
+                                "newVal": "{{pathProjectPayloads}}playlist_the-basics/footage"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}adding-more-media.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "コンポジションへさらにファイルを追加"
+                        },
+                        {
+                            "type": "text",
+                            "text": "前回のチュートリアルでは、コンポジションを作成し、タイムラインパネルで開きました。このチュートリアルでは、タイムラインパネルにファイルを追加してコンポジションを整理します。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "ロゴの後ろに背景ビデオを追加して、より視覚的に面白いコンポジションを作成します。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "{{definition:{TOOLTIP.PROJECT_PANEL}|プロジェクトパネル}}をダブルクリックし、ビデオファイル <$Summer_Forest.mp4$> を追加します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "doesItemExist",
+                                            "payload": {
+                                                "itemName": "Summer_Forest.mp4",
+                                                "itemType": "file"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "<$Summer_Forest.mp4$> ファイルをプロジェクトパネルからタイムラインパネルの APEAK およびロゴファイルの下へドラッグ＆ドロップします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerAtIndex",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "index": "last"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "タイムラインパネルを見てください。Summer_Forest.mp4 ファイルが追加され、コンポジションパネルで変更点を確認できます。Summer_Forest.mp4 ファイルが APEAK ロゴの後ろに表示されるようになりました。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}move-summer-layer-up.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "レイヤー"
+                        },
+                        {
+                            "type": "text",
+                            "text": "タイムラインパネルにファイルを追加すると、コンポジションに様々なエレメントまたは<$レイヤー$>が追加されます。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "レイヤーを積み重ねて、コンポジションの様々なエレメント (この場合はテキスト、ロゴおよび背景ビデオ) を作成できます。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "レイヤーの積み重ねと配置の方法に基づいて、コンポジションの視覚効果を変更できます。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "{{definition:{TOOLTIP.TIMELINE_PANEL}|タイムラインパネル}}の左側で、<$Summer_Forest.mp4$> レイヤーをクリックし、コンポジションの上部 (2 つのロゴレイヤーの上) にドラッグします。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "isLayerAtIndex",
+                                            "payload": {
+                                                "layerName": "Summer_Forest.mp4",
+                                                "index": "first"
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "{{definition:{TOOLTIP.COMPOSITION_PANEL}|コンポジションパネルl}}を見てください。何が変わりましたか？APEAK ロゴがまだ見えますか？タイムラインパネルの上部にあるレイヤーは、その下のレイヤーを覆い隠します。APEAK ロゴは Summer_Forest.mp4 ビデオに覆い隠されて見えません。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepActionsOnShow": [
+                        {
+                            "actionName": "setLayerIndex",
+                            "payload": {
+                                "layerName": "Summer_Forest.mp4",
+                                "index": "last"
+                            }
+                        }
+                    ],
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}trim-logo-layer.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "レイヤーのデュレーションの変更"
+                        },
+                        {
+                            "type": "text",
+                            "text": "レイヤーは前の手順から元の順序へリセットされました。"
+                        },
+                        {
+                            "type": "text",
+                            "text": "タイムラインパネルの右側にある<$色付きバー$>は、レイヤーがコンポジションに表示される時間を表します。色付きバーの長さを変更することにより、レイヤーの表示時間を変更できます。ここではレイヤーのデュレーションをすべて統一します。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "<$APEAK$> の色付きバーの末尾にカーソルを移動し、バーをクリックして <$Summer_Forest.mp4$> レイヤーの色付きバーと同じ長さになるまで左にドラッグします。(ドラッグ中は <%{KEY.SHIFT}%> キーを押したままにし、完全にバーを揃えます。)",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerDuration",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "duration": [
+                                                    8,
+                                                    12
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "このプロセスを<$ロゴ$>レイヤーでも繰り返します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerDuration",
+                                            "payload": {
+                                                "layerName": "Logo",
+                                                "duration": [
+                                                    8,
+                                                    12
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "背景ビデオの長さと一致するように APEAK およびロゴレイヤーの末尾をトリミングしました。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "video",
+                            "videoUrl": "{{pathPanelPayloadsWithKey}}shift-logo-layer.mp4",
+                            "autoplay": true,
+                            "loop": true
+                        },
+                        {
+                            "type": "heading",
+                            "text": "レイヤーが表示されたときの変更"
+                        },
+                        {
+                            "type": "text",
+                            "text": "レイヤーの色付きバーの開始位置は、そのレイヤーが最初にコンポジションに表示されるタイミングを示します。色付きバーの開始位置を変更して、レイヤーが最初に表示されるタイミングを調整できます。ここでは、APEAK レイヤーが他の 2 つのレイヤーの少し後に表示されるように設定します。"
+                        },
+                        {
+                            "type": "listSubsteps",
+                            "listItems": [
+                                {
+                                    "text": "カーソルを APEAK の色付きバーの先頭に移動し、クリックしてコンポジションの約 1 秒の位置に達するまでドラッグします。(参照用に小さな青いマーカーが 1 秒の位置に配置されます)。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkLayerStart",
+                                            "payload": {
+                                                "layerName": "APEAK",
+                                                "duration": [
+                                                    1,
+                                                    3
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "構成を先頭から再生して変更をプレビューするには、<%{KEY.SPACEBAR}%> キーを押します。",
+                                    "checkUserInteractions": [
+                                        {
+                                            "check": "checkCti",
+                                            "payload": {
+                                                "position": 0
+                                            }
+                                        },
+                                        {
+                                            "check": "ctiMoved"
+                                        }
+                                    ],
+                                    "showOnComplete": {
+                                        "heading": "成功!",
+                                        "texts": [
+                                            "ロゴや背景ビデオの再生が開始された後、APEAK テキストはコンポジションの 1 秒のマークの時点で表示されます。レイヤーは左から右に色付きバーが開始する順序で表示されます。"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stepItems": [
+                        {
+                            "type": "endScreen",
+                            "successHeading": "よくできました！",
+                            "successText": "レイヤーを使用してコンポジションを整理する方法を学習しました。次に、レイヤーをアニメーション化して、ロゴを動かす方法を学習します。"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
